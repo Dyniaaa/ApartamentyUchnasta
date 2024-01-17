@@ -1,0 +1,111 @@
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  & p:first-of-type {
+    margin-top: 50px;
+    font-size: 2em;
+  }
+
+  div {
+    .image-container {
+      height: 80vh;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .arrowButton {
+      transform: rotate(-90deg);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid gray;
+      transition: 0.4s;
+
+      &:last-of-type {
+        transform: rotate(90deg);
+      }
+
+      &:hover {
+        transform: rotate(90deg) scale(1.2);
+      }
+
+      &:first-of-type:hover {
+        transform: rotate(-90deg) scale(1.2);
+      }
+    }
+  }
+
+  .thumbnails {
+    padding: 75px 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    width: 30%;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      &.active-thumbnail {
+        border: 2px solid #3498db;
+        opacity: 1;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  .gallery {
+    div {
+      .image-container {
+        height: 75vh;
+
+        img {
+          width: 95%;
+        }
+      }
+    }
+
+    .thumbnails {
+      padding: 30px 0;
+      width: 50%;
+    }
+  }
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .gallery {
+    div {
+      .image-container {
+        height: 65vh;
+
+        img {
+          width: 95%;
+        }
+      }
+    }
+
+    .thumbnails {
+      padding: 30px 0;
+      width: 80%;
+    }
+  }
+}

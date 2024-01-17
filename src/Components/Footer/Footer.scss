@@ -1,0 +1,86 @@
+.footer {
+  padding-bottom: 30px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(176, 170, 151);
+
+  .footerConact {
+    background-color: rgb(176, 170, 151);
+
+    .footerContactTitle {
+      font-size: 1.5em;
+      padding-bottom: 1em;
+      border-bottom: 2px orange solid;
+    }
+
+    div {
+      .listElement {
+        text-decoration: none;
+      }
+
+      p {
+        font-size: 1em;
+        color: black;
+        margin: 10px 0px;
+      }
+
+      .contactDiv {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 8%;
+          height: 100%;
+          padding-right: 0.5em;
+        }
+      }
+    }
+  }
+
+  .logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+
+    img {
+      width: 60%;
+      max-height: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+  }
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  // no need
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .footer {
+    .footerConact {
+      margin-left: 1em;
+
+      .footerContactTitle {
+        font-size: 1.1em;
+      }
+
+      div {
+        p {
+          font-size: 0.6em;
+        }
+      }
+    }
+
+    .logoDiv {
+      width: 50%;
+    }
+  }
+}

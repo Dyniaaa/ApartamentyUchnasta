@@ -1,0 +1,45 @@
+.MainInfoLocationTitle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgb(176, 170, 151);
+
+  img {
+    width: 67%;
+    max-height: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 33%;
+
+    p {
+      text-align: center;
+      font-size: 1.5em;
+      padding-bottom: 1em;
+      border-bottom: 2px orange solid;
+    }
+  }
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  // no need
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .MainInfoLocationTitle {
+    flex-direction: column-reverse;
+
+    img {
+      width: 100%;
+    }
+  }
+}

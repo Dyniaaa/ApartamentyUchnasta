@@ -1,0 +1,45 @@
+.mainInfoApartmentInfoImg {
+  width: 100%;
+  background-color: white;
+  display: flex;
+
+  .ourApartment {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 37%;
+    background-color: rgb(176, 170, 151);
+
+    p {
+      text-align: center;
+      font-size: 1.5em;
+      padding-bottom: 1em;
+      border-bottom: 2px orange solid;
+    }
+  }
+
+  img {
+    width: 63%;
+    max-height: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .mainInfoApartmentInfoImg {
+    flex-direction: column;
+
+    .ourApartment {
+      width: 100%;
+
+      p {
+        text-align: center; //nothing for future
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

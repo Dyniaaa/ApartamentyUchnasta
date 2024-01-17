@@ -1,0 +1,14 @@
+.mapWithMarker {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  iframe {
+    width: 80%;
+    height: 90%;
+    border: 2px orange solid;
+    border-bottom: 3px orange solid;
+  }
+}

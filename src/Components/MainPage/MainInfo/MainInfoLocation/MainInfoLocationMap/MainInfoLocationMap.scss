@@ -1,0 +1,36 @@
+.mainInfoLocationMap {
+  padding: 40px 0px;
+  display: flex;
+  width: 100%;
+  background-color: white;
+
+  .mapWithMarkerDiv {
+    width: 35%;
+  }
+
+  .mainInfoLocationMapTextDiv {
+    width: 65%;
+  }
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  // no need
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .mainInfoLocationMap {
+    flex-direction: column-reverse;
+
+    .mapWithMarkerDiv {
+      width: 100%;
+    }
+
+    .mainInfoLocationMapTextDiv {
+      width: 100%;
+    }
+  }
+}

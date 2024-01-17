@@ -1,0 +1,50 @@
+.marconi {
+  margin-top: 4em;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 100%;
+    background-color: white;
+
+    img {
+      width: 95%;
+      height: 90%;
+      padding: 2%;
+    }
+  }
+
+  & div:last-of-type {
+    width: 48%;
+    height: 100%;
+    background-color: rgb(176, 170, 151);
+
+    p {
+      padding: 20px 40px;
+    }
+  }
+}
+
+//Phones and tablets
+
+@media screen and (max-width: 1023px) {
+  .marconi {
+    flex-direction: column;
+
+    div {
+      margin-bottom: 4em;
+      width: 100%;
+    }
+
+    & div:last-of-type {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

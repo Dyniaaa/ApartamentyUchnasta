@@ -1,0 +1,66 @@
+.howToGetHere {
+  width: 100%;
+  display: flex;
+  margin: 4em 0em;
+
+  .psDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 1.5em 0em;
+
+    .howToGetHereTitle {
+      font-size: 1.5em;
+      padding-bottom: 1em;
+      border-bottom: 2px orange solid;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1em;
+      margin: 0.1em;
+    }
+
+    div {
+      display: flex;
+
+      img {
+        width: 18%;
+        height: 100%;
+        padding-right: 0.5em;
+      }
+    }
+  }
+
+  .contactMapDiv {
+    width: 70%;
+  }
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  .howToGetHere {
+    .psDiv {
+      margin-left: 2em;
+    }
+  }
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .howToGetHere {
+    flex-direction: column;
+
+    .psDiv {
+      width: 100%;
+    }
+
+    .contactMapDiv {
+      width: 100%;
+    }
+  }
+}

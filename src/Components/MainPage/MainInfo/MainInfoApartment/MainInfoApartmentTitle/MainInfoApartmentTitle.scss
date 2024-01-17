@@ -1,0 +1,28 @@
+.mainInfoApartmentTitle {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & p:first-child {
+    padding-top: 4em;
+  }
+
+  & p:last-child {
+    padding-bottom: 4em;
+  }
+
+  p {
+    text-align: center;
+    color: gray;
+    padding: 2em;
+    margin: 0px;
+  }
+
+  div {
+    background-color: orange;
+    width: 4em;
+    height: 2px;
+  }
+}

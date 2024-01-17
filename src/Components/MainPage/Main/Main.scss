@@ -1,0 +1,29 @@
+.main {
+  background-image: url("./Busko-Zdroj.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia;
+
+  .mainText {
+    font-size: 3em;
+    text-align: center;
+    margin: 0px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 2em;
+      margin: 0px;
+    }
+  }
+}

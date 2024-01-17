@@ -1,0 +1,67 @@
+.contactMainForm {
+  color: black;
+  background-color: white;
+  width: 65%;
+
+  .contactUsDiv {
+    display: flex;
+    width: 100%;
+    margin: 2em 0em;
+
+    .askUsDiv {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 2em;
+
+      p {
+        padding-top: 50px;
+        text-align: center;
+        font-size: 1.5em;
+        padding-bottom: 1em;
+        border-bottom: 2px orange solid;
+      }
+    }
+
+    .formDiv {
+      width: 70%;
+    }
+  }
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  .contactMainForm {
+    width: 80%;
+
+    .contactUsDiv {
+      .askUsDiv {
+        margin-left: 2em;
+      }
+    }
+  }
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .contactMainForm {
+    width: 85%;
+
+    .contactUsDiv {
+      flex-direction: column;
+      width: 100%;
+
+      .askUsDiv {
+        width: 100%;
+        margin-left: 0em;
+      }
+
+      .formDiv {
+        width: 100%;
+      }
+    }
+  }
+}

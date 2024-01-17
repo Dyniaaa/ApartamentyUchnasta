@@ -1,0 +1,42 @@
+.mainInfoApartmentInfoText {
+  display: flex;
+
+  img {
+    width: 37%;
+    max-height: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  div {
+    width: 63%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      padding: 2em;
+      text-align: center;
+      color: gray;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .mainInfoApartmentInfoText {
+    flex-direction: column-reverse;
+
+    img {
+      width: 100%;
+    }
+
+    div {
+      width: 100%;
+
+      p {
+        padding: 2em; //nothing for future
+      }
+    }
+  }
+}

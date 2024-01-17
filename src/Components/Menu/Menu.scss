@@ -1,0 +1,164 @@
+// Over 1023px Computers e.t.c
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 0px 8px gray;
+
+  img {
+    max-height: 100%;
+    height: 14vh;
+    overflow: hidden;
+  }
+
+  .phoneMenuIcon {
+    display: none;
+  }
+
+  ul {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0rem;
+    margin: 0rem;
+
+    li {
+      list-style: none;
+
+      .listElement {
+        text-decoration: none;
+        color: black;
+      }
+
+      .listElement:hover {
+        color: gray;
+      }
+    }
+  }
+}
+
+.phoneMenu {
+  display: none;
+}
+
+//Tablets
+
+@media screen and (min-width: 599px) and (max-width: 1023px) {
+  // no need
+}
+
+//Phones
+
+@media screen and (max-width: 599px) {
+  .menu {
+    height: 15;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .phoneMenuIcon {
+      display: flex;
+      flex-direction: column;
+      padding: 1em;
+      margin-left: 2em;
+      height: 100%;
+
+      .phoneMenuDiv {
+        background-color: black;
+        margin: 0.1em 0em;
+        width: 1.2em;
+        height: 0.2em;
+      }
+    }
+
+    img {
+      margin-right: 1em;
+    }
+
+    ul {
+      display: none;
+    }
+  }
+
+  @keyframes moveIn {
+    0% {
+      left: -50%;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  .phoneMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgb(176, 170, 151);
+    animation: moveIn 1s forwards;
+
+    .returnMenu {
+      font-size: 2em;
+      padding: 0.5em 0em 0.5em 1em;
+
+      img {
+        width: 10%;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0rem;
+      padding-left: 2em;
+
+      li {
+        padding-bottom: 1rem;
+      }
+
+      .listElement {
+        font-size: 1.2rem;
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .phoneMenuBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    animation: fadeIn 1s forwards;
+  }
+}

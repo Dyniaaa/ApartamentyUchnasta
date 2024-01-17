@@ -1,0 +1,16 @@
+.mainInfoLocationMapText {
+  width: 100%;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      font-size: 1rem;
+      padding: 2em;
+      color: gray;
+    }
+  }
+}
