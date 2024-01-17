@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import React, { Component } from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./Components/MainPage/MainPage";

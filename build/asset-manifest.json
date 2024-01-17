@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ApartamentyUchnasta/static/css/main.21a71d6d.css",
+    "main.css": "/ApartamentyUchnasta/static/css/main.0c019746.css",
     "main.js": "/ApartamentyUchnasta/static/js/main.94f51ac7.js",
     "static/js/787.28cb0dcd.chunk.js": "/ApartamentyUchnasta/static/js/787.28cb0dcd.chunk.js",
     "static/media/Busko-Zdroj.jpg": "/ApartamentyUchnasta/static/media/Busko-Zdroj.7ce977faa548e4f2a42d.jpg",
@@ -14,12 +14,12 @@
     "static/media/Apartment-photo.webp": "/ApartamentyUchnasta/static/media/Apartment-photo.37855f812aed381c7362.webp",
     "static/media/LogoBusko.png": "/ApartamentyUchnasta/static/media/LogoBusko.4e56969fdab68e8efaac.png",
     "index.html": "/ApartamentyUchnasta/index.html",
-    "main.21a71d6d.css.map": "/ApartamentyUchnasta/static/css/main.21a71d6d.css.map",
+    "main.0c019746.css.map": "/ApartamentyUchnasta/static/css/main.0c019746.css.map",
     "main.94f51ac7.js.map": "/ApartamentyUchnasta/static/js/main.94f51ac7.js.map",
     "787.28cb0dcd.chunk.js.map": "/ApartamentyUchnasta/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21a71d6d.css",
+    "static/css/main.0c019746.css",
     "static/js/main.94f51ac7.js"
   ]
 }
