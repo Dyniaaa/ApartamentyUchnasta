@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ApartamentyUchnasta/static/css/main.0c019746.css",
+    "main.js": "/ApartamentyUchnasta/static/js/main.94f51ac7.js",
+    "static/js/787.28cb0dcd.chunk.js": "/ApartamentyUchnasta/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Busko-Zdroj.jpg": "/ApartamentyUchnasta/static/media/Busko-Zdroj.7ce977faa548e4f2a42d.jpg",
+    "static/media/Sypialania-Photo.webp": "/ApartamentyUchnasta/static/media/Sypialania-Photo.eac96db2b05d2cea4c07.webp",
+    "static/media/alley.jpg": "/ApartamentyUchnasta/static/media/alley.2d2af887210f801b8f54.jpg",
+    "static/media/Busko.jpg": "/ApartamentyUchnasta/static/media/Busko.946bd4888ce71c9af59f.jpg",
+    "static/media/graduationTower.jpg": "/ApartamentyUchnasta/static/media/graduationTower.64dcaeb54925d3584f3a.jpg",
+    "static/media/uzdrowisko.jpg": "/ApartamentyUchnasta/static/media/uzdrowisko.269dfa8023eecfca7c4f.jpg",
+    "static/media/natureReserve.jpg": "/ApartamentyUchnasta/static/media/natureReserve.9fb18bf66f729a48aceb.jpg",
+    "static/media/marconi.jpg": "/ApartamentyUchnasta/static/media/marconi.e48a595fca52f5f0ca2c.jpg",
+    "static/media/Apartment-photo.webp": "/ApartamentyUchnasta/static/media/Apartment-photo.37855f812aed381c7362.webp",
+    "static/media/LogoBusko.png": "/ApartamentyUchnasta/static/media/LogoBusko.4e56969fdab68e8efaac.png",
+    "index.html": "/ApartamentyUchnasta/index.html",
+    "main.0c019746.css.map": "/ApartamentyUchnasta/static/css/main.0c019746.css.map",
+    "main.94f51ac7.js.map": "/ApartamentyUchnasta/static/js/main.94f51ac7.js.map",
+    "787.28cb0dcd.chunk.js.map": "/ApartamentyUchnasta/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c019746.css",
+    "static/js/main.94f51ac7.js"
+  ]
+}
