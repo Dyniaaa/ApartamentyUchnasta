@@ -13,3 +13,5 @@ A brief description of my project.
 
 - React
 - SCSS (Sass) for styling
+
+You can check the website on: https://Dyniaaa.github.io/ApartamentyUchnasta/
