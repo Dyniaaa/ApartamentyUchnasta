@@ -5,122 +5,92 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shouldApplyClassName: false,
-      shouldApplyClassMail: false,
-      shouldApplyClassMsg: false,
-      shouldApplyClassSuccess: false,
-      name: "",
-      mail: "",
-      msg: "",
+      status: "",
     };
   }
 
-  handleChange = (e) => {
-    const { name, value } = e.target;
+  handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    try {
+      const response = await fetch("./mail.php", {
+        method: "POST",
+        body: formData,
+      });
 
-    switch (name) {
-      case "name":
-        break;
-      case "mail":
-        break;
-      case "msg":
-        break;
-      default:
-        break;
-    }
-
-    this.setState({ [name]: value });
-  };
-
-  handleSubmit = (e) => {
-    e.preventDefault();
-    const { name, mail, msg } = this.state;
-    const mailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (name.length === 0) {
-      this.setState({ shouldApplyClassName: true });
-    } else if (name.length !== 0) {
-      this.setState({ shouldApplyClassName: false });
-    }
-
-    if (!mailPattern.test(mail)) {
-      this.setState({ shouldApplyClassMail: true });
-    } else if (mail.length !== 0) {
-      this.setState({ shouldApplyClassMail: false });
-    }
-
-    if (msg.length === 0) {
-      this.setState({ shouldApplyClassMsg: true });
-    } else if (msg.length !== 0) {
-      this.setState({ shouldApplyClassMsg: false });
-    }
-
-    if (
-      name.length !== 0 &&
-      mail.length !== 0 &&
-      msg.length !== 0 &&
-      mailPattern.test(mail)
-    ) {
-      this.setState({ shouldApplyClassSuccess: true });
-    } else {
-      this.setState({ shouldApplyClassSuccess: false });
+      if (response.ok) {
+        const result = await response.json();
+        if (result.status === "success") {
+          this.setState({ status: "success" });
+        } else {
+          this.setState({ status: "error" });
+        }
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      console.error("There was an error!", error);
+      this.setState({ status: "error" });
     }
   };
 
   render() {
-    const {
-      shouldApplyClassName,
-      shouldApplyClassMail,
-      shouldApplyClassMsg,
-      shouldApplyClassSuccess,
-    } = this.state;
+    const success = {
+      textAlign: "center",
+      backgroundColor: "#66ff66",
+      width: "40%",
+      padding: "1rem",
+      color: "white",
+    };
+
+    const error = {
+      textAlign: "center",
+      backgroundColor: "#ff4444",
+      width: "40%",
+      padding: "1rem",
+      color: "white",
+    };
 
     return (
       <section className="form">
-        <form onSubmit={this.handleSubmit} action="mail.php" method="POST">
-          <div className={shouldApplyClassName ? "errorDiv" : "nameDisplay"}>
-            <p>Pole niepoprawnie wypełnione</p>
-          </div>
-          <div>
-            <input
-              name="name"
-              type="text"
-              placeholder="Imię"
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className={shouldApplyClassMail ? "errorDiv" : "mailDisplay"}>
-            <p>Pole niepoprawnie wypełnione</p>
-          </div>
-          <div>
-            <input
-              name="mail"
-              type="text"
-              placeholder="Mail"
-              onChange={this.handleChange}
-            />
-          </div>
-          <div className={shouldApplyClassMsg ? "errorDiv" : "msgDisplay"}>
-            <p>Pole niepoprawnie wypełnione</p>
-          </div>
-          <div>
-            <textarea
-              rows={10}
-              name="msg"
-              type="text"
-              placeholder="Wiadomość"
-              onChange={this.handleChange}
-            />
-          </div>
-          <div
-            className={
-              shouldApplyClassSuccess ? "successDiv" : "successDisplay"
-            }
-          >
-            <p>Mail został poprawnie wysłany!</p>
-          </div>
-          <button type="submit">Wyślij</button>
-        </form>
+        {this.state.status === "success" ? (
+          <p style={success}>Wiadomość została wysłana pomyślnie!</p>
+        ) : this.state.status === "error" ? (
+          <p style={error}>Wystąpił błąd podczas wysyłania wiadomości.</p>
+        ) : (
+          <form onSubmit={this.handleSubmit}>
+            <div>
+              <input
+                name="name"
+                type="text"
+                id="name"
+                placeholder="Imię"
+                required
+              />
+            </div>
+
+            <div>
+              <input
+                name="mail"
+                id="mail"
+                type="text"
+                placeholder="Mail"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                rows={10}
+                name="msg"
+                type="text"
+                placeholder="Wiadomość"
+                required
+              />
+            </div>
+
+            <button type="submit">Wyślij</button>
+          </form>
+        )}
       </section>
     );
   }
