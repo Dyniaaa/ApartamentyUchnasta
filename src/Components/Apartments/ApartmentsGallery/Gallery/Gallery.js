@@ -9,7 +9,7 @@ const images = [
   "/GalleryPhotos/5.jpg",
   "/GalleryPhotos/6.jpg",
 ];
-
+ 
 function Gallery() {
   const [currentImage, setCurrentImage] = useState(0);
 
