@@ -90,18 +90,18 @@
 
   @keyframes moveIn {
     0% {
-      left: -50%;
+      right: -50%;
     }
 
     100% {
-      left: 0;
+      right: 0;
     }
   }
 
   .phoneMenu {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 45%;
     height: 100%;
     z-index: 2;
@@ -109,11 +109,12 @@
     animation: moveIn 1s forwards;
 
     .returnMenu {
+      text-align: end;
+      padding: 0 15px 15px 0;
       font-size: 2em;
-      padding: 0.5em 0em 0.5em 1em;
 
       img {
-        width: 10%;
+        width: 12px;
       }
     }
 
@@ -124,6 +125,11 @@
 
       li {
         padding-bottom: 1rem;
+
+        &:hover {
+          transform: scale(1.05);
+          transition: .7s;
+        }
       }
 
       .listElement {

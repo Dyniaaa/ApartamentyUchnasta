@@ -15,7 +15,7 @@ class Menu extends Component {
     this.setState((prevState) => ({
       Menu: !prevState.Menu,
     }));
-    console.log(this.state.Menu);
+    console.log(this.state.Menu, 'click');
     let phoneMenu = document.querySelector(".phoneMenu");
     let phoneMenuBackground = document.querySelector(".phoneMenuBackground");
     if (!this.state.Menu) {
@@ -36,17 +36,18 @@ class Menu extends Component {
     return (
       <div>
         <div className="menu">
-          <div className="phoneMenuIcon" onClick={this.handleClick}>
-            <div className="phoneMenuDiv"></div>
-            <div className="phoneMenuDiv"></div>
-            <div className="phoneMenuDiv"></div>
-          </div>
+         
           <NavLink to={"/"}>
             <img
               src={require("./LogoBusko.png")}
               alt="Logo Apartamenty Uchnasta"
             />
           </NavLink>
+          <div className="phoneMenuIcon" onClick={this.handleClick}>
+            <div className="phoneMenuDiv"></div>
+            <div className="phoneMenuDiv"></div>
+            <div className="phoneMenuDiv"></div>
+          </div>
           <ul>
             <li>
               <NavLink to={"/"} className={"listElement"}>
