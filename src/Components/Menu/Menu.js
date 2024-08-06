@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
 import "./Menu.scss";
 
 class Menu extends Component {
@@ -15,7 +14,7 @@ class Menu extends Component {
     this.setState((prevState) => ({
       Menu: !prevState.Menu,
     }));
-    console.log(this.state.Menu, 'click');
+    console.log(this.state.Menu, "click");
     let phoneMenu = document.querySelector(".phoneMenu");
     let phoneMenuBackground = document.querySelector(".phoneMenuBackground");
     if (!this.state.Menu) {
@@ -36,7 +35,6 @@ class Menu extends Component {
     return (
       <div>
         <div className="menu">
-         
           <NavLink to={"/"}>
             <img
               src={require("./LogoBusko.png")}
@@ -56,12 +54,12 @@ class Menu extends Component {
             </li>
             <li>
               <NavLink to={"/Apartament"} className={"listElement"}>
-                Apartament
+                Apartamenty
               </NavLink>
             </li>
             <li>
               <NavLink to={"/Busko"} className={"listElement"}>
-                Busko
+                Busko - Zdrój
               </NavLink>
             </li>
             <li>
@@ -72,11 +70,8 @@ class Menu extends Component {
           </ul>
         </div>
         <div className="phoneMenu hide">
-          <div className="returnMenu" onClick={this.handleClick}>
-            <img
-              src={require("./x.png")}
-              alt="X"
-            />
+          <div className="returnMenu">
+            <img src={require("./x.png")} alt="X" onClick={this.handleClick} />
           </div>
           <ul>
             <li>
@@ -86,12 +81,12 @@ class Menu extends Component {
             </li>
             <li>
               <NavLink to={"/Apartament"} className={"listElement"}>
-                Apartament
+                Apartamenty
               </NavLink>
             </li>
             <li>
               <NavLink to={"/Busko"} className={"listElement"}>
-                Busko
+                Busko - Zdrój
               </NavLink>
             </li>
             <li>
@@ -101,7 +96,10 @@ class Menu extends Component {
             </li>
           </ul>
         </div>
-        <div className="phoneMenuBackground hide"></div>
+        <div
+          className="phoneMenuBackground hide"
+          onClick={this.handleClick}
+        ></div>
       </div>
     );
   }

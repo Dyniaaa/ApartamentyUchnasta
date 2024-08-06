@@ -5,9 +5,9 @@ class MainInfoApartmentInfoImg extends Component {
     return (
       <section className="mainInfoApartmentInfoImg">
         <div className="ourApartment">
-          <p>Our Apartment</p>
+          <p>Nasze Apartmenty</p>
         </div>
-        <img src={require("./Apartment-photo.webp")} alt="Apartment" />
+        <img src={require("./4.Salon1.jpg")} alt="Apartment" />
       </section>
     );
   }

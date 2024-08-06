@@ -1,57 +1,98 @@
 import "./Gallery.scss";
-import React, { useState } from "react";
+import React from "react";
 
-const images = [
-  "/GalleryPhotos/1.jpg",
-  "/GalleryPhotos/2.jpg",
-  "/GalleryPhotos/3.jpg",
-  "/GalleryPhotos/4.jpg",
-  "/GalleryPhotos/5.jpg",
-  "/GalleryPhotos/6.jpg",
+import ImageGallery from "react-image-gallery";
+
+const images1 = [
+  {
+    original: "/GalleryPhotos/APT1.1/1.Sypialnia1.jpg",
+    thumbnail: "/GalleryPhotos/APT1.1/1.Sypialnia1.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT1.1/2.Sypialnia2.jpg",
+    thumbnail: "/GalleryPhotos/APT1.1/2.Sypialnia2.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT1.1/3.Salon1.jpg",
+    thumbnail: "/GalleryPhotos/APT1.1/3.Salon1.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT1.1/4.Salon2.jpg",
+    thumbnail: "/GalleryPhotos/APT1.1/4.Salon2.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT1.1/5.Łazienka.jpeg",
+    thumbnail: "/GalleryPhotos/APT1.1/5.Łazienka.jpeg",
+  },
+  {
+    original: "/GalleryPhotos/APT1.1/6.Kuchnia1.jpg",
+    thumbnail: "/GalleryPhotos/APT1.1/6.Kuchnia1.jpg",
+  },
 ];
- 
-function Gallery() {
-  const [currentImage, setCurrentImage] = useState(0);
 
-  const handlePrevClick = () => {
-    setCurrentImage((prevImage) =>
-      prevImage === 0 ? images.length - 1 : prevImage - 1
-    );
-  };
+const images2 = [
+  {
+    original: "/GalleryPhotos/APT2.1/1.Kuchnia1.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/1.Kuchnia1.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/2.Kuchnia2.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/2.Kuchnia2.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/3.Korytarz.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/3.Korytarz.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/4.Salon1.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/4.Salon1.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/5.Salon2.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/5.Salon2.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/6.Łazienka1.JPEG",
+    thumbnail: "/GalleryPhotos/APT2.1/6.Łazienka1.JPEG",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/7.Łazienka2.JPEG",
+    thumbnail: "/GalleryPhotos/APT2.1/7.Łazienka2.JPEG",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/8.Sypialnia1.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/8.Sypialnia1.jpg",
+  },
+  {
+    original: "/GalleryPhotos/APT2.1/9.Sypialnia2.jpg",
+    thumbnail: "/GalleryPhotos/APT2.1/9.Sypialnia2.jpg",
+  },
+];
 
-  const handleNextClick = () => {
-    setCurrentImage((prevImage) =>
-      prevImage === images.length - 1 ? 0 : prevImage + 1
-    );
-  };
-
-  return (
-    <section className="gallery">
-      <p>Galeria</p>
-      <div className="slider">
-        <p onClick={handlePrevClick} className="arrowButton"></p>
-        <div className="image-container">
-          <img
-            src={process.env.PUBLIC_URL + images[currentImage]}
-            alt={`Zdjęcie ${currentImage + 1}`}
+class MyGallery extends React.Component {
+  render() {
+    return (
+      <div className="galleryBox">
+        <h2>Apartamenty</h2>
+        <div>
+          <h3>Apartament 1.1</h3>
+          <ImageGallery
+            items={images1}
+            showPlayButton={false}
+            additionalClass={"gallery1"}
           />
         </div>
-        <p onClick={handleNextClick} className="arrowButton"></p>
-      </div>
-      <div className="thumbnails">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={process.env.PUBLIC_URL + image}
-            alt={`Miniatura ${index + 1}`}
-            className={index === currentImage ? "active-thumbnail" : ""}
-            onClick={() => setCurrentImage(index)}
-            style={{ width: `${100 / images.length}%` }}
+        <div>
+          <h3>Apartament 2.1</h3>
+          <ImageGallery
+            items={images2}
+            showPlayButton={false}
+            additionalClass={"gallery2"}
           />
-        ))}
+        </div>
       </div>
-    </section>
-  );
+    );
+  }
 }
 
-export default Gallery;
+export default MyGallery;

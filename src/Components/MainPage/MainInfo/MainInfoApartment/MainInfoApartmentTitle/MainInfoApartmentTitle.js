@@ -8,9 +8,9 @@ class MainInfoApartmentTitle extends Component {
         <p>A Home in the Heart of the City</p>
         <div></div>
         <p>
-          Stay in a beautiful highrise in Ipanema just off the beach close to
-          many world-class cafes and restaurants. Enjoy Bossa Nova with a cold
-          beer!
+          Zapraszamy do naszego pensjonatu w Busku-Zdroju, słynnym uzdrowiskowym
+          mieście położonym w malowniczym otoczeniu. Oferujemy komfortowy
+          wypoczynek i relaks w pobliżu słynnej buskiej tężni solankowej.
         </p>
       </div>
     );
