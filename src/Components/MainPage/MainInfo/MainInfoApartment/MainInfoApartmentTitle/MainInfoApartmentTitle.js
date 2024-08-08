@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import "./MainInfoApartmentTitle.scss";
+import { Fade } from "react-awesome-reveal";
 
 class MainInfoApartmentTitle extends Component {
   render() {
     return (
-      <div className="mainInfoApartmentTitle">
+      <Fade className='mainInfoApartmentTitleContainer' direction="up" triggerOnce>
+          <div className="mainInfoApartmentTitle">
         <p>A Home in the Heart of the City</p>
         <div></div>
         <p>
@@ -13,6 +15,8 @@ class MainInfoApartmentTitle extends Component {
           wypoczynek i relaks w pobliżu słynnej buskiej tężni solankowej.
         </p>
       </div>
+      </Fade>
+    
     );
   }
 }

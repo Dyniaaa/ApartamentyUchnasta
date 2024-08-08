@@ -5,10 +5,11 @@ class MainInfoLocationTitle extends Component {
   render() {
     return (
       <section className="MainInfoLocationTitle">
-        <img src={require("./uzdrowisko.jpg")} alt="Uzdrowisko" />
         <div>
-          <p>Location</p>
+          <p>BUSKO - ZDRÓJ</p>
         </div>
+        <img src={require("./uzdrowisko.jpg")} alt="Uzdrowisko" />
+        
       </section>
     );
   }
