@@ -1,4 +1,4 @@
-.graduationTower {
+.buskoland {
   margin-top: 4em;
   height: 100%;
   display: flex;
@@ -24,31 +24,32 @@
   }
 
   & div:first-of-type {
+    left: 3%;
+  }
+
+  & div:last-of-type {
     width: 43%;
     height: 100%;
     align-items: start;
     background-color: rgb(176, 170, 151);
     border-radius: 15px;
-    padding: 30px 70px;
-    position: relative;
-    left: 5%;
-    padding-left: 50px;
-    z-index: 1;
+    padding: 30px;
+    right: 7%;
 
     h2 {
       margin: 0;
     }
-  }
 
-  & div:last-of-type {
-    right: 5%;
+    p {
+      padding-right: 50px;
+    }
   }
 }
 
 //Phones and tablets
 
 @media screen and (max-width: 1023px) {
-  .graduationTower {
+  .natureReserve {
     flex-direction: column-reverse;
 
     div {

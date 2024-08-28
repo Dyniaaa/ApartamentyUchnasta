@@ -5,10 +5,8 @@ class GraduationTower extends Component {
   render() {
     return (
       <div className="graduationTower">
-        <div>
-          <img src={require("./graduationTower.jpg")} alt="graduationTower" />
-        </div>
-        <div>
+        <div className="text-box">
+          <h2>Tężnia</h2>
           <p>
             Tężnia w Busku-Zdroju to nowoczesny ośrodek uzdrowiskowy, oferujący
             inhalacje solankowe dla poprawy zdrowia i samopoczucia.
@@ -20,6 +18,9 @@ class GraduationTower extends Component {
             jak i mieszkańców, którzy pragną korzystać z dobroczynnych efektów
             tężni w spokojnym i urokliwym otoczeniu.
           </p>
+        </div>
+        <div>
+          <img src={require("./graduationTower.jpg")} alt="graduationTower" />
         </div>
       </div>
     );

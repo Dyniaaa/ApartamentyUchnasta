@@ -8,7 +8,8 @@ class Marconi extends Component {
         <div>
           <img src={require("./marconi.jpg")} alt="marconi" />
         </div>
-        <div>
+        <div className="text-box">
+          <h2>Sanatorium Marconi</h2>
           <p>
             Sanatorium Marconi w Busku-Zdroju jest renomowanym ośrodkiem zdrowia
             i rehabilitacji, specjalizującym się w kompleksowej opiece medycznej

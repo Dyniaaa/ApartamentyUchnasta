@@ -1,22 +1,24 @@
 .marconi {
   margin-top: 4em;
-  width: 70%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: white;
+  background-color: rgb(176, 170, 151);
+  padding: 40px;
 
   div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 48%;
     height: 100%;
-    background-color: white;
 
     img {
-      width: 95%;
-      height: 90%;
-      padding: 2%;
+      width: 85%;
+      height: auto;
+      border-radius: 15px;
     }
   }
 
@@ -24,9 +26,13 @@
     width: 48%;
     height: 100%;
     background-color: rgb(176, 170, 151);
+    align-items: start;
 
+    h2 {
+      margin: 0;
+    }
     p {
-      padding: 20px 40px;
+      padding-right: 70px;
     }
   }
 }

@@ -1,32 +1,41 @@
 .alley {
   margin-top: 4em;
-  width: 70%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  color: white;
 
   div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     width: 48%;
     height: 100%;
     background-color: white;
 
     img {
-      width: 95%;
-      height: 90%;
-      padding: 2%;
+      width: 85%;
+      height: auto;
+      border-radius: 15px;
     }
   }
 
   & div:first-of-type {
-    width: 48%;
+    width: 40%;
     height: 100%;
     background-color: rgb(176, 170, 151);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    left: 7%;
 
+    h2 {
+      margin: 0;
+    }
+    
     p {
-      padding: 20px 40px;
+      padding-right: 50px;
     }
   }
 }
