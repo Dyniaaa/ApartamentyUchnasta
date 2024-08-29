@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   font-family: Georgia;
+  position: relative;
 
   .mainText {
     font-size: 3em;
@@ -26,5 +27,10 @@
       font-size: 2em;
       margin: 0px;
     }
+  }
+
+  svg {
+    position: absolute;
+    bottom: 50px;
   }
 }

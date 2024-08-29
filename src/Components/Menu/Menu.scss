@@ -6,14 +6,14 @@
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   background-color: white;
   width: 100%;
   box-shadow: 0px 0px 8px gray;
 
   img {
-    height: 5em;
-    padding: 1em 0em;
+    height: 4em;
+    // padding: 1em 0em;
     overflow: hidden;
   }
 
@@ -33,11 +33,33 @@
 
       .listElement {
         text-decoration: none;
+        position: relative;
         color: black;
-      }
+        transition: color 0.3s ease-in-out;
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          top: 25px;
+          margin: auto;
+          width: 0%;
+          content: '';
+          color: transparent;
+          background: #aaa;
+          height: 1px;
+          transition: all .5s;
+        }
 
-      .listElement:hover {
-        color: gray;
+
+        &:hover {
+          color: gray;
+          &::after {
+            color: gray;
+            width: 100%;
+            // transition: 0.5s;
+          }
+        }
       }
     }
   }

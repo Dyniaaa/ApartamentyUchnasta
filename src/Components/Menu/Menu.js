@@ -14,7 +14,6 @@ class Menu extends Component {
     this.setState((prevState) => ({
       Menu: !prevState.Menu,
     }));
-    console.log(this.state.Menu, "click");
     let phoneMenu = document.querySelector(".phoneMenu");
     let phoneMenuBackground = document.querySelector(".phoneMenuBackground");
     if (!this.state.Menu) {
@@ -35,7 +34,7 @@ class Menu extends Component {
     return (
       <div>
         <div className="menu">
-          <NavLink to={"/"}>
+          <NavLink to={"/"} onClick={() => window.scrollTo(0, 0)}>
             <img
               src={require("./LogoBusko.png")}
               alt="Logo Apartamenty Uchnasta"
@@ -48,7 +47,7 @@ class Menu extends Component {
           </div>
           <ul>
             <li>
-              <NavLink to={"/"} className={"listElement"}>
+              <NavLink to={"/"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Strona Główna
               </NavLink>
             </li>
@@ -58,8 +57,8 @@ class Menu extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Busko"} className={"listElement"}>
-                Busko - Zdrój
+              <NavLink to={"/Busko"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
+                Atrakcje
               </NavLink>
             </li>
             <li>

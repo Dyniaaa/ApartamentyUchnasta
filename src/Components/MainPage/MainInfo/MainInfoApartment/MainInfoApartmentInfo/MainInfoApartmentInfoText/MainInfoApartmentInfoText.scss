@@ -1,42 +1,59 @@
-.mainInfoApartmentInfoText {
+.MainInfoApartmentInfoTile {
   display: flex;
+  justify-content: center;
 
-  img {
-    width: 37%;
-    max-height: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-
-  div {
-    width: 63%;
-    background-color: white;
+  .appartment-container {
+    width: 23%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin: 100px 50px;
+    padding: 20px;
+    background-color: rgb(242 235 211);
+    border-radius: 15px;
 
-    p {
-      padding: 2em;
-      text-align: center;
-      color: gray;
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        color: #947c57;
+      }
+    }
+
+    button {
+      background-color: #947c57;
+      border: none;
+      padding: 15px;
+      margin: 20px 0;
+      text-transform: uppercase;
+      color: rgb(246 240 220);
+    }
+    .detail-box {
+      display: flex;
+
+      &_icon {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+
+        svg {
+          margin-right: 10px;
+          color: #947c57;
+        }
+
+        p {
+          margin: 0;
+          color: #4a4339;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 599px) {
-  .mainInfoApartmentInfoText {
+  .MainInfoApartmentInfoTile {
     flex-direction: column-reverse;
-
-    img {
-      width: 100%;
-    }
-
-    div {
-      width: 100%;
-
-      p {
-        padding: 2em; //nothing for future
-      }
-    }
   }
 }

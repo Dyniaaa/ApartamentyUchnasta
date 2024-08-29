@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./MainInfoApartmentInfo.scss";
 import MainInfoApartmentInfoImg from "./MainInfoApartmentInfoImg/MainInfoApartmentInfoImg";
-import MainInfoApartmentInfoText from "./MainInfoApartmentInfoText/MainInfoApartmentInfoText";
+import MainInfoApartmentInfoTile from "./MainInfoApartmentInfoText/MainInfoApartmentInfoTile";
 
 class MainInfoApartmentInfo extends Component {
   render() {
     return (
       <div className="mainInfoApartmentInfo">
         <MainInfoApartmentInfoImg />
-        <MainInfoApartmentInfoText />
+        <MainInfoApartmentInfoTile />
       </div>
     );
   }
