@@ -8,12 +8,78 @@
   div {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 }
+
 .gallery1 {
   margin-top: 2em;
+
+  .image-gallery-content {
+    height: 60%;
+    width: 60%;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .image-gallery-right-nav {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 1%;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-gallery-svg {
+      width: 40%;
+    }
+  }
+
+  .image-gallery-left-nav {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 1%;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-gallery-svg {
+      width: 40%;
+    }
+  }
+
+  .ThumbnailClass {
+    height: 15rem;
+    width: 15rem;
+  }
 }
+
 .gallery2 {
   margin-top: 2em;
+
+  .image-gallery-right-nav {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 1%;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-gallery-svg {
+      width: 40%;
+    }
+  }
+
+  .image-gallery-left-nav {
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    height: 1%;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-gallery-svg {
+      width: 40%;
+    }
+  }
 }
