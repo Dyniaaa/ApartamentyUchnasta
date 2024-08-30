@@ -29,6 +29,15 @@
       margin: 20px 0;
       text-transform: uppercase;
       color: rgb(246 240 220);
+      transition: 0.8s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(242 235 211);
+        outline: 1px #947c57 solid;
+        color: #947c57;
+        font-weight: 600;
+      }
     }
     .detail-box {
       display: flex;

@@ -8,7 +8,7 @@ class MainInfoApartmentInfoTile extends Component {
         <div className="appartment-container">
           <img src={require("./2.Sypialnia2.jpg")} alt="bedroom" />
           <div>
-            <h3>Apartament 1.1</h3>
+            <h3>Apartament 1</h3>
             <div className="detail-box">
               <div className="detail-box_icon">
                 <svg
@@ -63,7 +63,7 @@ class MainInfoApartmentInfoTile extends Component {
         <div className="appartment-container">
           <img src={require("./1.Kuchnia1.jpg")} alt="" />
           <div>
-            <h3>Apartament 2.1</h3>
+            <h3>Apartament 2</h3>
             <div className="detail-box">
               <div className="detail-box_icon">
                 <svg
