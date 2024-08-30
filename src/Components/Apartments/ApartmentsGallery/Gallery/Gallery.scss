@@ -5,10 +5,61 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 7rem;
+
   div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    .txtDiv {
+      position: absolute;
+      right: 5%;
+      top: 25%;
+      width: 30%;
+
+      span {
+        font-size: 50px;
+        color: #4a4339;
+        font-weight: 100;
+      }
+
+      p {
+        line-height: 1.6;
+        font-size: 17px;
+        font-weight: 400;
+        background-color: #b5a183;
+        word-spacing: 10px;
+        color: white;
+        padding: 3rem;
+      }
+
+      button {
+        z-index: 1;
+        position: relative;
+        bottom: 35px;
+        right: 15px;
+        color: #b5a183;
+        background-color: white;
+        border: 2px solid #b5a183;
+        padding: 1.3rem;
+        font-size: 25px;
+        cursor: pointer;
+
+        svg {
+          padding-right: 0.5em;
+        }
+      }
+    }
+
+    .ndtxt {
+      top: 7%;
+    }
+  }
+
+  .gallery2container {
+    position: relative;
   }
 }
 
@@ -17,9 +68,17 @@
 
   .image-gallery-content {
     height: 60%;
-    width: 60%;
+    width: 100%;
     display: flex;
     align-items: flex-start;
+
+    :hover {
+      color: white;
+    }
+
+    .image-gallery-slide-wrapper {
+      width: 60%;
+    }
   }
 
   .image-gallery-right-nav {
@@ -51,11 +110,44 @@
   .ThumbnailClass {
     height: 15rem;
     width: 15rem;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  .image-gallery-thumbnail {
+    border: none;
+  }
+
+  .image-gallery-thumbnail.active,
+  .image-gallery-thumbnail:focus {
+    border: none;
   }
 }
 
 .gallery2 {
   margin-top: 2em;
+
+  .image-gallery-content {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+
+    :hover {
+      color: white;
+    }
+
+    .image-gallery-slide-wrapper {
+      width: 60%;
+    }
+
+    .image-gallery-thumbnails-wrapper {
+      display: flex;
+      width: 100%;
+    }
+  }
 
   .image-gallery-right-nav {
     background-color: rgba($color: #000000, $alpha: 0.5);
@@ -81,5 +173,23 @@
     .image-gallery-svg {
       width: 40%;
     }
+  }
+
+  .ThumbnailClass {
+    height: 15rem;
+    width: 15rem;
+
+    :hover {
+      cursor: pointer;
+    }
+  }
+
+  .image-gallery-thumbnail {
+    border: none;
+  }
+
+  .image-gallery-thumbnail.active,
+  .image-gallery-thumbnail:focus {
+    border: none;
   }
 }

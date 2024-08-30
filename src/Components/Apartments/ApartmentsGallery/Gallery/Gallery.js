@@ -83,8 +83,35 @@ class MyGallery extends React.Component {
   render() {
     return (
       <div className="galleryBox">
-        <h2>Apartamenty</h2>
         <div>
+          <div className="txtDiv">
+            <span>APARTAMENT I</span>
+            <p>
+              Salon z kanapa z możliwością spania dla 2 osób, sypialnia 2
+              osobowa z łóżkiem podwójnym. Apartament posiada balkon z tarasem,
+              Łazienke z prysznicem, TV w salonie oraz w pełni wyposażoną
+              kuchnie. Powierzchnia to 62 m kw.
+            </p>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              </svg>
+              Zadzwoń i spytaj o dostępność!
+            </button>
+          </div>
+
           <ImageGallery
             items={images1}
             showPlayButton={false}
@@ -92,8 +119,35 @@ class MyGallery extends React.Component {
             additionalClass={"gallery1"}
           />
         </div>
-        <div>
-          <h3>Apartament 2.1</h3>
+        <div className="gallery2container">
+          <div className="txtDiv ndtxt">
+            <span>APARTAMENT II</span>
+            <p>
+              Salon z kanapa z możliwością spania dla 2 osób, sypialnia 2
+              osobowa z 2 łóżkami pojedynczymi z możliwością połączenia w łózko
+              podwójne. Apartament posiada 2 balkony, Łazienke z prysznicem, TV
+              w salonie oraz w pełni wyposażoną kuchnie. Powierzchnia to 68 m
+              kw.
+            </p>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-phone"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              </svg>
+              Zadzwoń i spytaj o dostępność!
+            </button>
+          </div>
           <ImageGallery
             items={images2}
             showPlayButton={false}
