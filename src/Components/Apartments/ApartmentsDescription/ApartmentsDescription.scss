@@ -1,0 +1,66 @@
+.description-wrapper {
+  display: flex;
+  color: #4a4339;
+  padding: 80px;
+  width: 100%;
+  box-sizing: border-box;
+
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    border-bottom: 1px solid #4a4339;
+    padding-bottom: 10px;
+  }
+
+  .facilities {
+    width: 60%;
+
+    .icons-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      .icon-box {
+        display: flex;
+        align-items: center;
+        width: 33%;
+        padding-top: 25px;
+
+        svg {
+          margin-right: 7px;
+          height: 35px;
+          width: 35px;
+        }
+         
+        .icon {
+            margin-right: 7px;
+            height: 35px;
+            width: 35px;
+          }
+      }
+    }
+  }
+
+  .details {
+    width: 40%;
+
+    .details-box {
+      display: flex;
+      flex-direction: column;
+
+      .details-hours {
+        display: flex;
+
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 50px;
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

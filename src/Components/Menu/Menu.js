@@ -52,7 +52,7 @@ class Menu extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Apartament"} className={"listElement"}>
+              <NavLink to={"/Apartament"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Apartamenty
               </NavLink>
             </li>
@@ -62,7 +62,7 @@ class Menu extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Contact"} className={"listElement"}>
+              <NavLink to={"/Contact"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Kontakt
               </NavLink>
             </li>
@@ -74,22 +74,22 @@ class Menu extends Component {
           </div>
           <ul>
             <li>
-              <NavLink to={"/"} className={"listElement"}>
+              <NavLink to={"/"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Strona Główna
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Apartament"} className={"listElement"}>
+              <NavLink to={"/Apartament"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Apartamenty
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Busko"} className={"listElement"}>
+              <NavLink to={"/Busko"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Busko - Zdrój
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Contact"} className={"listElement"}>
+              <NavLink to={"/Contact"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
                 Kontakt
               </NavLink>
             </li>

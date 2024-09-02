@@ -30,11 +30,9 @@
       .contactDiv {
         display: flex;
         align-items: center;
-
-        img {
-          width: 8%;
-          height: 100%;
-          padding-right: 0.5em;
+        
+        svg {
+          margin-right: 10px;
         }
       }
     }

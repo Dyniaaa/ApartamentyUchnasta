@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./MainInfoApartmentInfoText.scss";
+import { NavLink } from "react-router-dom";
 
 class MainInfoApartmentInfoTile extends Component {
   render() {
@@ -57,7 +58,9 @@ class MainInfoApartmentInfoTile extends Component {
                 <p>68 m²</p>
               </div>
             </div>
-            <button>Szczegóły</button>
+            <NavLink to={"/Apartament"} onClick={() => window.scrollTo(0, 0)}>
+              <button>Szczegóły</button>
+            </NavLink>
           </div>
         </div>
         <div className="appartment-container">
@@ -112,7 +115,9 @@ class MainInfoApartmentInfoTile extends Component {
                 <p>62 m²</p>
               </div>
             </div>
-            <button>Szczegóły</button>
+            <NavLink to={"/Apartament"} onClick={() => window.scrollTo(0, 0)}>
+              <button>Szczegóły</button>
+            </NavLink>
           </div>
         </div>
       </section>

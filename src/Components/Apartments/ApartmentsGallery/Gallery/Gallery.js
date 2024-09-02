@@ -80,6 +80,10 @@ const images2 = [
 ];
 
 class MyGallery extends React.Component {
+  handleImgLoad = (event) => {
+   console.log('fsujf', event)
+  };
+ 
   render() {
     return (
       <div className="galleryBox">
@@ -87,10 +91,10 @@ class MyGallery extends React.Component {
           <div className="txtDiv">
             <span>APARTAMENT I</span>
             <p>
-              Salon z kanapa z możliwością spania dla 2 osób, sypialnia 2
-              osobowa z łóżkiem podwójnym. Apartament posiada balkon z tarasem,
-              Łazienke z prysznicem, TV w salonie oraz w pełni wyposażoną
-              kuchnie. Powierzchnia to 62 m kw.
+              Sypialnia z łóżkiem małżeńskim, salon z kanapą z możliwością
+              spania dla 2 osób. W pełni wyposażona kuchnia. Łazienka z
+              prysznicem. Apartament z balkonem wyposażony w stolik kawowy.
+              Powierzchnia - 62 m².
             </p>
             <button>
               <svg
@@ -117,17 +121,18 @@ class MyGallery extends React.Component {
             showPlayButton={false}
             showFullscreenButton={false}
             additionalClass={"gallery1"}
+            lazyLoad={true}
+            onImageLoad={this.handleImgLoad}
           />
         </div>
         <div className="gallery2container">
           <div className="txtDiv ndtxt">
             <span>APARTAMENT II</span>
             <p>
-              Salon z kanapa z możliwością spania dla 2 osób, sypialnia 2
-              osobowa z 2 łóżkami pojedynczymi z możliwością połączenia w łózko
-              podwójne. Apartament posiada 2 balkony, Łazienke z prysznicem, TV
-              w salonie oraz w pełni wyposażoną kuchnie. Powierzchnia to 68 m
-              kw.
+              Sypialnia z 2 łóżkami pojedynczymi z
+              możliwością połączenia w łózko małżeńskie, salon z kanapą z
+              możliwością spania dla 2 osób. W pełni wyposażona kuchnia.
+              Łazienka z prysznicem. Apartament z 2 balkonami. Powierzchnia - 68 m².
             </p>
             <button>
               <svg
@@ -153,6 +158,7 @@ class MyGallery extends React.Component {
             showPlayButton={false}
             showFullscreenButton={false}
             additionalClass={"gallery2"}
+            onImageLoad={this.handleImgLoad}
           />
         </div>
       </div>
