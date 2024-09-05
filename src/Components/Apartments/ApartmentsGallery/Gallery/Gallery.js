@@ -80,14 +80,33 @@ const images2 = [
 ];
 
 class MyGallery extends React.Component {
-  handleImgLoad = (event) => {
-   console.log('fsujf', event)
+  constructor(props) {
+    super(props);
+    this.state = {
+      gallery1Loaded: false,
+      gallery2Loaded: false,
+    };
+  }
+
+  handleFirstGalleryLoad = () => {
+    if (!this.state.gallery1Loaded) {
+      this.setState({ gallery1Loaded: true });
+    }
   };
- 
+
+  handleSecondGalleryLoad = () => {
+    if (!this.state.gallery2Loaded) {
+      this.setState({ gallery2Loaded: true });
+    }
+  };
+
   render() {
+    const { gallery1Loaded, gallery2Loaded } = this.state;
+
     return (
       <div className="galleryBox">
-        <div>
+        {!gallery1Loaded && <div class="loader"></div>}
+        <div className={`gallery1container ${gallery1Loaded ? "visible" : "hidden"}`}>
           <div className="txtDiv">
             <span>APARTAMENT I</span>
             <p>
@@ -122,17 +141,19 @@ class MyGallery extends React.Component {
             showFullscreenButton={false}
             additionalClass={"gallery1"}
             lazyLoad={true}
-            onImageLoad={this.handleImgLoad}
+            onImageLoad={this.handleFirstGalleryLoad}
           />
         </div>
-        <div className="gallery2container">
+
+        {!gallery2Loaded && <div class="loader"></div>}
+        <div className={`gallery2container ${gallery2Loaded ? "visible" : "hidden"}`}>
           <div className="txtDiv ndtxt">
             <span>APARTAMENT II</span>
             <p>
-              Sypialnia z 2 łóżkami pojedynczymi z
-              możliwością połączenia w łózko małżeńskie, salon z kanapą z
-              możliwością spania dla 2 osób. W pełni wyposażona kuchnia.
-              Łazienka z prysznicem. Apartament z 2 balkonami. Powierzchnia - 68 m².
+              Sypialnia z 2 łóżkami pojedynczymi z możliwością połączenia w
+              łózko małżeńskie, salon z kanapą z możliwością spania dla 2 osób.
+              W pełni wyposażona kuchnia. Łazienka z prysznicem. Apartament z 2
+              balkonami. Powierzchnia - 68 m².
             </p>
             <button>
               <svg
@@ -158,7 +179,7 @@ class MyGallery extends React.Component {
             showPlayButton={false}
             showFullscreenButton={false}
             additionalClass={"gallery2"}
-            onImageLoad={this.handleImgLoad}
+            onImageLoad={this.handleSecondGalleryLoad}
           />
         </div>
       </div>
