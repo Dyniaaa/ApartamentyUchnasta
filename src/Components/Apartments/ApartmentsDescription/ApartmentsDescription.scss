@@ -30,12 +30,12 @@
           height: 35px;
           width: 35px;
         }
-         
+
         .icon {
-            margin-right: 7px;
-            height: 35px;
-            width: 35px;
-          }
+          margin-right: 7px;
+          height: 35px;
+          width: 35px;
+        }
       }
     }
   }
@@ -60,6 +60,75 @@
             margin-right: 10px;
           }
         }
+      }
+    }
+  }
+}
+
+.bookable-facilities {
+  display: flex;
+  color: #4a4339;
+  padding: 80px;
+  width: 100%;
+  box-sizing: border-box;
+
+  .bookable {
+    width: 60%;
+
+    h2 {
+      text-transform: uppercase;
+      letter-spacing: 7px;
+      border-bottom: 1px solid #4a4339;
+      padding-bottom: 10px;
+    }
+
+    .icons-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      .icon-box {
+        display: flex;
+        align-items: center;
+        width: 33%;
+        padding-top: 25px;
+
+        svg {
+          margin-right: 7px;
+          height: 35px;
+          width: 35px;
+        }
+
+        .icon {
+          margin-right: 7px;
+          height: 35px;
+          width: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .description-wrapper {
+    flex-direction: column;
+
+    .facilities {
+      width: 100%;
+    }
+
+    .details {
+      width: 100%;
+    }
+  }
+
+  .bookable-facilities {
+    width: 100%;
+
+    .bookable {
+      width: 100%;
+      
+      h2 {
+        width: 100%;
       }
     }
   }

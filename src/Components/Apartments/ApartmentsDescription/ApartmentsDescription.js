@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./ApartmentsDescription.scss";
-import vacumIcon from "./vacum-icon.svg";
 
 class ApartmentsDescription extends Component {
   render() {
@@ -19,9 +18,9 @@ class ApartmentsDescription extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-device-tv"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-device-tv"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
@@ -38,9 +37,9 @@ class ApartmentsDescription extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-wifi"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-wifi"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M12 18l.01 0" />
@@ -84,9 +83,9 @@ class ApartmentsDescription extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-grill"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-grill"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M19 8h-14a6 6 0 0 0 6 6h2a6 6 0 0 0 6 -5.775l0 -.225z" />
@@ -140,9 +139,9 @@ class ApartmentsDescription extends Component {
                       width="70.2203"
                       height="65.1523"
                       filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
+                      colorInterpolationFilters="sRGB"
                     >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
                       <feColorMatrix
                         in="SourceAlpha"
                         type="matrix"
@@ -217,9 +216,9 @@ class ApartmentsDescription extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-wash-machine"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-wash-machine"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M5 3m0 2a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z" />
@@ -240,9 +239,9 @@ class ApartmentsDescription extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-milk"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-milk"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M8 6h8v-2a1 1 0 0 0 -1 -1h-6a1 1 0 0 0 -1 1v2z" />
@@ -264,6 +263,28 @@ class ApartmentsDescription extends Component {
                 </svg>
                 <span>Darmowy parking</span>
               </div>
+              <div className="icon-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-device-gamepad-2"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4z" />
+                  <path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" />
+                  <path d="M8 9v2" />
+                  <path d="M7 10h2" />
+                  <path d="M14 10h2" />
+                </svg>
+                <span>Konsola</span>
+              </div>
             </div>
           </div>
           <div className="details">
@@ -279,9 +300,9 @@ class ApartmentsDescription extends Component {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-clock"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-clock"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -298,9 +319,9 @@ class ApartmentsDescription extends Component {
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     strokeLinejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-clock"
+                    className="icon icon-tabler icons-tabler-outline icon-tabler-clock"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
@@ -308,6 +329,50 @@ class ApartmentsDescription extends Component {
                   </svg>
                   <p>Wyjazd: 10:00</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bookable-facilities">
+          <div className="bookable">
+            <h2>Możlwość rezerwacji</h2>
+            <div className="icons-wrapper">
+              <div className="icon-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-device-gamepad-2"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M12 5h3.5a5 5 0 0 1 0 10h-5.5l-4.015 4.227a2.3 2.3 0 0 1 -3.923 -2.035l1.634 -8.173a5 5 0 0 1 4.904 -4.019h3.4z" />
+                  <path d="M14 15l4.07 4.284a2.3 2.3 0 0 0 3.925 -2.023l-1.6 -8.232" />
+                  <path d="M8 9v2" />
+                  <path d="M7 10h2" />
+                  <path d="M14 10h2" />
+                </svg>
+                <span>Konsola</span>
+              </div>
+              <div className="icon-box">
+                <svg
+                  fill="#000000"
+                  width="800px"
+                  height="800px"
+                  stroke="currentColor"
+                  viewBox="-0.5 0 32 32"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>bike</title>
+                  <path d="M25.8 14.32c-0.64 0-1.24 0.12-1.84 0.32l-1.52-3 2.6-3.88c0.28-0.4 0.12-1.32-0.72-1.32h-3.32c-0.48 0-0.84 0.36-0.84 0.84s0.36 0.84 0.84 0.84h1.76l-1.76 2.64h-9.68c-0.4 0-0.68 0.36-0.68 0.36v0 0 0 0l-2.56 3.76c-0.72-0.36-1.56-0.56-2.44-0.56-3.12 0-5.64 2.52-5.64 5.64s2.52 5.64 5.68 5.64c2.8 0 5.16-2.080 5.56-4.8h4.6c0.48 0 0.68-0.4 0.68-0.4v0l4.8-7.2 1.16 2.2c-1.4 1.040-2.32 2.68-2.32 4.56 0 3.12 2.52 5.64 5.64 5.64s5.64-2.52 5.64-5.64-2.56-5.64-5.64-5.64zM15.92 18.32l-3.2-5.92h7.12l-3.92 5.92zM11.24 13.2l3.16 5.92h-3.2c-0.2-1.28-0.84-2.44-1.76-3.28l1.8-2.64zM8.52 17.24c0.48 0.52 0.84 1.16 1 1.88h-2.28l1.28-1.88zM5.68 23.88c-2.16 0-3.96-1.76-3.96-3.96s1.76-3.92 3.96-3.92c0.52 0 1 0.12 1.48 0.28l-2.16 3.2c-0.36 0.44-0.040 1.28 0.68 1.28v0 0h3.84c-0.4 1.8-2 3.12-3.84 3.12zM25.8 23.88c-2.16 0-3.96-1.76-3.96-3.96 0-1.2 0.56-2.32 1.44-3.040l1.8 3.44c0.2 0.32 0.68 0.56 1.16 0.36 0.4-0.16 0.56-0.72 0.36-1.12l-1.8-3.4c0.32-0.080 0.68-0.16 1.040-0.16 2.16 0 3.96 1.76 3.96 3.96s-1.8 3.92-4 3.92zM9.8 9.4h3.080c0.48 0 0.84-0.36 0.84-0.84s-0.36-0.84-0.84-0.84h-3.080c-0.48 0-0.84 0.36-0.84 0.84-0.040 0.44 0.36 0.84 0.84 0.84z"></path>
+                </svg>
+                <span>Rowery Elektryczne</span>
               </div>
             </div>
           </div>

@@ -15,18 +15,22 @@ class Menu extends Component {
       Menu: !prevState.Menu,
     }));
     let phoneMenu = document.querySelector(".phoneMenu");
-    let phoneMenuBackground = document.querySelector(".phoneMenuBackground");
+    let first = document.querySelector(".topDiv");
+    let second = document.querySelector(".midDiv");
+    let third = document.querySelector(".bottomDiv");
     if (!this.state.Menu) {
       phoneMenu.classList.add("show");
-      phoneMenuBackground.classList.add("show");
-      phoneMenuBackground.classList.remove("hide");
       phoneMenu.classList.remove("hide");
+      first.classList.add("first");
+      second.classList.add("second");
+      third.classList.add("third");
     }
     if (this.state.Menu) {
       phoneMenu.classList.add("hide");
-      phoneMenuBackground.classList.add("hide");
-      phoneMenuBackground.classList.remove("show");
       phoneMenu.classList.remove("show");
+      first.classList.remove("first");
+      second.classList.remove("second");
+      third.classList.remove("third");
     }
   };
 
@@ -41,64 +45,89 @@ class Menu extends Component {
             />
           </NavLink>
           <div className="phoneMenuIcon" onClick={this.handleClick}>
-            <div className="phoneMenuDiv"></div>
-            <div className="phoneMenuDiv"></div>
-            <div className="phoneMenuDiv"></div>
+            <div className="phoneMenuDiv topDiv "></div>
+            <div className="phoneMenuDiv midDiv "></div>
+            <div className="phoneMenuDiv bottomDiv "></div>
           </div>
           <ul>
             <li>
-              <NavLink to={"/"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
+              <NavLink
+                to={"/"}
+                className={"listElement"}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Strona Główna
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Apartament"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
+              <NavLink
+                to={"/Apartament"}
+                className={"listElement"}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Apartamenty
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Busko"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
+              <NavLink
+                to={"/Busko"}
+                className={"listElement"}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Atrakcje
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/Contact"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
+              <NavLink
+                to={"/Contact"}
+                className={"listElement"}
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Kontakt
               </NavLink>
             </li>
           </ul>
-        </div>
-        <div className="phoneMenu hide">
-          <div className="returnMenu">
-            <img src={require("./x.png")} alt="X" onClick={this.handleClick} />
+          <div className="phoneMenu hide">
+            <ul className="phoneUl">
+              <li> 
+                <NavLink
+                  to={"/"}
+                  className={"listElement"}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Strona Główna
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/Apartament"}
+                  className={"listElement"}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Apartamenty
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/Busko"}
+                  className={"listElement"}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Busko - Zdrój
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/Contact"}
+                  className={"listElement"}
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  Kontakt
+                </NavLink>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <NavLink to={"/"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
-                Strona Główna
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={"/Apartament"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
-                Apartamenty
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={"/Busko"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
-                Busko - Zdrój
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={"/Contact"} className={"listElement"} onClick={() => window.scrollTo(0, 0)}>
-                Kontakt
-              </NavLink>
-            </li>
-          </ul>
         </div>
-        <div
-          className="phoneMenuBackground hide"
-          onClick={this.handleClick}
-        ></div>
       </div>
     );
   }

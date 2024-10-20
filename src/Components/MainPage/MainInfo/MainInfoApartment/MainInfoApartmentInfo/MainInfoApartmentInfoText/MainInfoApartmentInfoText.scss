@@ -64,5 +64,11 @@
 @media screen and (max-width: 599px) {
   .MainInfoApartmentInfoTile {
     flex-direction: column-reverse;
+    align-items: center;
+
+    .appartment-container {
+      margin: 50px 0px;
+      width: 70%;
+    }
   }
 }

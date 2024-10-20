@@ -19,7 +19,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(63 53 36 / 7%); // Czarny kolor z 50% przezroczystością
+    background-color: rgb(
+      63 53 36 / 7%
+    ); // Czarny kolor z 50% przezroczystością
     z-index: 1;
   }
 
@@ -89,7 +91,24 @@
 
 @media screen and (max-width: 599px) {
   .MainInfoLocationTitle {
-    flex-direction: column-reverse;
+    h2 {
+      font-size: 23px;
+    }
+
+    .activity_icons {
+      justify-content: center;
+
+      img {
+        height: 70%;
+        width: 70%;
+        z-index: 3;
+      }
+
+      p {
+        font-size: 12px;
+        text-align: center;
+      }
+    }
 
     img {
       width: 100%;

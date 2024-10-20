@@ -49,17 +49,32 @@
 //Phones and tablets
 
 @media screen and (max-width: 1023px) {
-  .natureReserve {
-    flex-direction: column-reverse;
+  .buskoland {
+    flex-direction: column;
 
     div {
-      margin-bottom: 4em;
+      justify-content: center;
+      align-items: center;
       width: 100%;
+
+      img {
+        width: 90%;
+        margin-bottom: 2em;
+      }
     }
 
     & div:first-of-type {
-      width: 100%;
-      text-align: center;
+      left: 0%;
+    }
+
+    & div:last-of-type {
+      left: 0%;
+      padding: 30px 50px 30px 40px;
+      width: 60%;
+
+      p {
+        padding-right: 0px;
+      }
     }
   }
 }

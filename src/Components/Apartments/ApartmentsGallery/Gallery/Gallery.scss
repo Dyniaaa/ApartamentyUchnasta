@@ -194,25 +194,24 @@
   }
 }
 
-
 .loader {
   margin: 100px;
   width: 50px !important;
   display: grid !important;
   align-items: normal !important;
   aspect-ratio: 1;
-  -webkit-mask: conic-gradient(from 15deg,#0000,#000);
+  -webkit-mask: conic-gradient(from 15deg, #0000, #000);
+  mask: none;
   animation: l26 1s infinite steps(12);
 }
 
 .loader,
 .loader:before,
-.loader:after{
-  background:
-    radial-gradient(closest-side at 50% 12.5%,
-    #b5a183 96%,#0000) 50% 0/20% 80% repeat-y,
-    radial-gradient(closest-side at 12.5% 50%,
-    #b5a183 96%,#0000) 0 50%/80% 20% repeat-x;
+.loader:after {
+  background: radial-gradient(closest-side at 50% 12.5%, #b5a183 96%, #0000) 50%
+      0/20% 80% repeat-y,
+    radial-gradient(closest-side at 12.5% 50%, #b5a183 96%, #0000) 0 50%/80% 20%
+      repeat-x;
 }
 
 .loader:before,
@@ -226,7 +225,9 @@
 }
 
 @keyframes l26 {
-  100% {transform:rotate(1turn)}
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .visible {
@@ -235,4 +236,81 @@
 
 .hidden {
   display: none !important;
+}
+
+@media screen and (max-width: 1250px) {
+  .galleryBox {
+    .gallery1container {
+      align-items: center;
+      flex-direction: column;
+
+      .txtDiv {
+        align-items: center;
+        position: static;
+        width: 100%;
+
+        p {
+          width: 80%;
+          padding: 2em;
+        }
+
+        button {
+          right: 0px;
+          width: 90%;
+        }
+      }
+
+      .gallery1 {
+        .image-gallery-content {
+          align-items: center;
+
+          .image-gallery-slide-wrapper {
+            width: 90%;
+          }
+
+          .ThumbnailClass {
+            height: 8rem;
+            width: 8rem;
+          }
+        }
+      }
+    }
+
+    .gallery2container {
+      align-items: center;
+      flex-direction: column;
+
+      .txtDiv {
+        margin-top: 5rem;
+        align-items: center;
+        position: static;
+        width: 100%;
+
+        p {
+          width: 80%;
+          padding: 2em;
+        }
+
+        button {
+          right: 0px;
+          width: 90%;
+        }
+      }
+
+      .gallery2 {
+        .image-gallery-content {
+          align-items: center;
+
+          .image-gallery-slide-wrapper {
+            width: 90%;
+          }
+
+          .ThumbnailClass {
+            height: 8rem;
+            width: 8rem;
+          }
+        }
+      }
+    }
+  }
 }

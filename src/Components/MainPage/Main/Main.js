@@ -22,7 +22,24 @@ class Main extends Component {
         <Fade direction="down" triggerOnce>
           <p className="mainText">Czuj się jak w domu, z daleka od domu</p>
         </Fade>
-        <svg className="arrow-icon"  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  strokeLlinejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M8 12l4 4" /><path d="M12 8v8" /><path d="M16 12l-4 4" /></svg>
+        <svg
+          className="arrow-icon icon icon-tabler icons-tabler-outline icon-tabler-circle-arrow-down"
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+          <path d="M8 12l4 4" />
+          <path d="M12 8v8" />
+          <path d="M16 12l-4 4" />
+        </svg>
       </section>
     );
   }

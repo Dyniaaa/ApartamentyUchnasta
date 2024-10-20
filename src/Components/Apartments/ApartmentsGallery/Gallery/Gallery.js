@@ -105,15 +105,19 @@ class MyGallery extends React.Component {
 
     return (
       <div className="galleryBox">
-        {!gallery1Loaded && <div class="loader"></div>}
-        <div className={`gallery1container ${gallery1Loaded ? "visible" : "hidden"}`}>
+        {!gallery1Loaded && <div className="loader"></div>}
+        <div
+          className={`gallery1container ${
+            gallery1Loaded ? "visible" : "hidden"
+          }`}
+        >
           <div className="txtDiv">
-            <span>APARTAMENT I</span>
+            <span>APARTAMENT&nbsp;I</span>
             <p>
               Sypialnia z łóżkiem małżeńskim, salon z kanapą z możliwością
               spania dla 2 osób. W pełni wyposażona kuchnia. Łazienka z
               prysznicem. Apartament z balkonem wyposażony w stolik kawowy.
-              Powierzchnia - 62 m².
+              Powierzchnia&nbsp;-&nbsp;62&nbsp;m².
             </p>
             <button>
               <svg
@@ -145,15 +149,19 @@ class MyGallery extends React.Component {
           />
         </div>
 
-        {!gallery2Loaded && <div class="loader"></div>}
-        <div className={`gallery2container ${gallery2Loaded ? "visible" : "hidden"}`}>
+        {!gallery2Loaded && <div className="loader"></div>}
+        <div
+          className={`gallery2container ${
+            gallery2Loaded ? "visible" : "hidden"
+          }`}
+        >
           <div className="txtDiv ndtxt">
-            <span>APARTAMENT II</span>
+            <span>APARTAMENT&nbsp;II</span>
             <p>
               Sypialnia z 2 łóżkami pojedynczymi z możliwością połączenia w
               łózko małżeńskie, salon z kanapą z możliwością spania dla 2 osób.
               W pełni wyposażona kuchnia. Łazienka z prysznicem. Apartament z 2
-              balkonami. Powierzchnia - 68 m².
+              balkonami. Powierzchnia&nbsp;-&nbsp;68&nbsp;m².
             </p>
             <button>
               <svg

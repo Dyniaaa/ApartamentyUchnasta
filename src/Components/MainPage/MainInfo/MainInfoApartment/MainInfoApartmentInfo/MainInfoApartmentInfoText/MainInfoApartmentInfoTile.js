@@ -20,9 +20,9 @@ class MainInfoApartmentInfoTile extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-users"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-users"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
@@ -41,9 +41,9 @@ class MainInfoApartmentInfoTile extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-maximize"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-arrows-maximize"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M16 4l4 0l0 4" />
@@ -77,9 +77,9 @@ class MainInfoApartmentInfoTile extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-users"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-users"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
@@ -98,9 +98,9 @@ class MainInfoApartmentInfoTile extends Component {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
-                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-maximize"
+                  className="icon icon-tabler icons-tabler-outline icon-tabler-arrows-maximize"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <path d="M16 4l4 0l0 4" />

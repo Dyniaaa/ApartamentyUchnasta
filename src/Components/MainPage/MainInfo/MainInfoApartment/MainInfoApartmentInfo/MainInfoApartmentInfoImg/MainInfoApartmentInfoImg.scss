@@ -61,9 +61,11 @@
 @media screen and (max-width: 599px) {
   .mainInfoApartmentInfoImg {
     flex-direction: column;
+    padding: 0;
 
     .ourApartment {
       width: 100%;
+      padding: 0px;
 
       p {
         text-align: center; //nothing for future
@@ -71,7 +73,17 @@
     }
 
     img {
-      width: 100%;
+      width: 60%;
+    }
+
+    .app-img {
+      left: -14%;
+      z-index: 3;
+
+      &-second {
+        top: -120px;
+        right: -14%;
+      }
     }
   }
 }
