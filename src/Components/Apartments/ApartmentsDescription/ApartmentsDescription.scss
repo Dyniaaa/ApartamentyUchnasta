@@ -24,17 +24,22 @@
         align-items: center;
         width: 33%;
         padding-top: 25px;
+        padding: 10px;
 
         svg {
           margin-right: 7px;
-          height: 35px;
-          width: 35px;
+          min-height: 25px;
+          min-width: 25px;
+          max-height: 25px;
+          max-width: 25px;
         }
 
         .icon {
           margin-right: 7px;
-          height: 35px;
-          width: 35px;
+          min-height: 25px;
+          min-width: 25px;
+          max-height: 25px;
+          max-width: 25px;
         }
       }
     }
@@ -94,14 +99,18 @@
 
         svg {
           margin-right: 7px;
-          height: 35px;
-          width: 35px;
+          min-height: 25px;
+          min-width: 25px;
+          max-height: 25px;
+          max-width: 25px;
         }
 
         .icon {
           margin-right: 7px;
-          height: 35px;
-          width: 35px;
+          min-height: 25px;
+          min-width: 25px;
+          max-height: 25px;
+          max-width: 25px;
         }
       }
     }
@@ -126,9 +135,66 @@
 
     .bookable {
       width: 100%;
-      
+
       h2 {
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .description-wrapper {
+    padding: 50px;
+
+    .facilities {
+      width: 100%;
+
+      .icons-wrapper {
+        .icon-box {
+          width: 40%;
+          padding-top: 25px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .bookable-facilities {
+    padding: 50px;
+
+    .bookable {
+      width: 100%;
+
+      .icons-wrapper {
+        .icon-box {
+          width: 50%;
+          padding-top: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .description-wrapper {
+    h2 {
+      font-size: 17px;
+    }
+
+    .details {
+      width: 40%;
+
+      .details-box {
+        display: flex;
+        flex-direction: column;
+
+        .details-hours {
+
+          > div {
+            padding-right: 0px;
+          }
+        }
       }
     }
   }

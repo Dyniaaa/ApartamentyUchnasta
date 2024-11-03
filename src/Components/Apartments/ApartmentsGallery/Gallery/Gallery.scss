@@ -314,3 +314,41 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .galleryBox {
+    .gallery1container {
+      .txtDiv {
+        span {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 15px;
+          word-spacing: 7px;
+        }
+
+        button {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .gallery2container {
+      .txtDiv {
+        span {
+          font-size: 40px;
+        }
+
+        p {
+          font-size: 15px;
+          word-spacing: 7px;
+        }
+
+        button {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
