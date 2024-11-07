@@ -14,3 +14,24 @@
     }
   }
 }
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .mainInfoLocationMapText {
+    div {
+      p {
+        padding: 2em 2em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .mainInfoLocationMapText {
+    div {
+      p {
+        padding: 2em 2em;
+        text-align: center;
+      }
+    }
+  }
+}

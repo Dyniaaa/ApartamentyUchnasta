@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./MainPage.scss";
 import Menu from "../Menu/Menu";
 import Main from "./Main/Main";
 import MainInfo from "./MainInfo/MainInfo";

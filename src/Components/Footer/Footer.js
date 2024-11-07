@@ -27,7 +27,7 @@ class Footer extends Component {
                 <path d="M3 7l9 6l9 -6" />
               </svg>{" "}
               <NavLink to={"/Contact"} className={"listElement"}>
-                <p>Przejdź do Formularza Kontaktowego</p>
+                <p className="footerText">Przejdź do Formularza Kontaktowego</p>
               </NavLink>
             </div>
             <div className="contactDiv">
@@ -47,7 +47,7 @@ class Footer extends Component {
                 <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
                 <path d="M3 7l9 6l9 -6" />
               </svg>
-              <p>apartamentyuchnasta3@gmail.com</p>
+              <p className="footerText">apartamentyuchnasta3@gmail.com</p>
             </div>
             <div className="contactDiv">
               <svg
@@ -65,7 +65,9 @@ class Footer extends Component {
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
               </svg>{" "}
-              <p>884 875 800</p>
+              <a className="footerText" href="tel:884875800">
+                884 875 800
+              </a>
             </div>
             <div className="contactDiv">
               <svg
@@ -83,7 +85,9 @@ class Footer extends Component {
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
               </svg>{" "}
-              <p>504 253 973</p>
+              <a className="footerText" href="tel:504253973">
+                504 253 973
+              </a>
             </div>
           </div>
         </div>

@@ -200,8 +200,7 @@
   display: grid !important;
   align-items: normal !important;
   aspect-ratio: 1;
-  -webkit-mask: conic-gradient(from 15deg, #0000, #000);
-  mask: none;
+  mask: conic-gradient(from 15deg, #0000, #000);
   animation: l26 1s infinite steps(12);
 }
 
@@ -253,10 +252,12 @@
           width: 80%;
           padding: 2em;
         }
-
-        button {
-          right: 0px;
+        a {
           width: 90%;
+          button {
+            right: 0px;
+            width: 100%;
+          }
         }
       }
 
@@ -291,9 +292,12 @@
           padding: 2em;
         }
 
-        button {
-          right: 0px;
+        a {
           width: 90%;
+          button {
+            right: 0px;
+            width: 100%;
+          }
         }
       }
 

@@ -12,11 +12,11 @@ class HowToGetHere extends Component {
           <p>ul. Uchnasta 3</p>
           <div>
             <img src={require("./PhoneIcon.jpg")} alt="phoneIcon" />
-            <p>504 253 973</p>
+            <a href="tel:504253973">504 253 973</a>
           </div>
           <div>
             <img src={require("./PhoneIcon.jpg")} alt="phoneIcon" />
-            <p>884 875 800</p>
+            <a href="tel:884875800">884 875 800</a>
           </div>
         </div>
         <div className="contactMapDiv">

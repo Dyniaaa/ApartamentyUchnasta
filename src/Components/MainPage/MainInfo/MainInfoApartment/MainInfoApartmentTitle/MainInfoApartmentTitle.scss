@@ -1,5 +1,4 @@
-
-.mainInfoApartmentTitleContainer{
+.mainInfoApartmentTitleContainer {
   display: flex;
   justify-content: center;
 }
@@ -35,5 +34,11 @@
     background-color: orange;
     width: 4em;
     height: 2px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .mainInfoApartmentTitle {
+    width: 90%;
   }
 }
