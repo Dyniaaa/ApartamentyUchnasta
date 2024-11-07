@@ -31,16 +31,14 @@ export default function ContactForm() {
   }
   return (
     <section className="form">
-      {formStatus ? (
-        <p className={formStatus}>
+        {formStatus && <p className={formStatus}>
           {formStatus === "success"
             ? "Wiadomość została wysłana pomyślnie!"
             : "Wystąpił błąd podczas wysyłania wiadomości. Skontaktuj się telefonicznie lub spróbuj jeszcze raz"}
-        </p>
-      ) : (
+        </p>}        
         <form
           name="contact"
-          method="post"
+          method="POST"
           data-netlify="true"
           onSubmit={handleSubmit}
         >
@@ -73,9 +71,9 @@ export default function ContactForm() {
               required
             />
           </div>
-          <button type="submit">Wyślij</button>
+          <button type="submit" disabled={formStatus}>Wyślij</button>
         </form>
-      )}
+      
     </section>
   );
 }
