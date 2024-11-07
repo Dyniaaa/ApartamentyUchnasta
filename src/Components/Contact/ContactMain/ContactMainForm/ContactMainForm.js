@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./ContactMainForm.scss";
 import Form from "./Form/Form";
 import HowToGetHere from "./HowToGetHere/HowToGetHere";
+import ContactForm from "./ContactForm/ContactForm";
 
 class ContactMainForm extends Component {
   render() {
@@ -12,7 +13,7 @@ class ContactMainForm extends Component {
             <p>Pytaj o co Chcesz!</p>
           </div>
           <div className="formDiv">
-            <Form />
+            <ContactForm />
           </div>
         </div>
 

@@ -37,18 +37,20 @@ class Form extends Component {
   render() {
     const success = {
       textAlign: "center",
-      backgroundColor: "#66ff66",
+      backgroundColor: "rgb(243 255 244)",
+      border: "1px solid green",
+      borderRadius: "10px",
       width: "40%",
       padding: "1rem",
-      color: "white",
     };
 
     const error = {
       textAlign: "center",
-      backgroundColor: "#ff4444",
+      backgroundColor: "rgb(255 236 236)",
+      border: "1px solid red",
+      borderRadius: "10px",
       width: "40%",
       padding: "1rem",
-      color: "white",
     };
 
     return (
@@ -56,8 +58,9 @@ class Form extends Component {
         {this.state.status === "success" ? (
           <p style={success}>Wiadomość została wysłana pomyślnie!</p>
         ) : this.state.status === "error" ? (
-          <p style={error}>Wystąpił błąd podczas wysyłania wiadomości.</p>
+          <p style={error}>Wystąpił błąd podczas wysyłania wiadomości. Skontaktuj się telefonicznie lub spróbuj jeszcze raz</p>
         ) : (
+          
           <form onSubmit={this.handleSubmit}>
             <div>
               <input
