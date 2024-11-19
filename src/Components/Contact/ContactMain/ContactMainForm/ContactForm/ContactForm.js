@@ -17,16 +17,13 @@ export default function ContactForm() {
     })
       .then((response) => {
         if (response.ok) {
-          console.log("sucess");
           setFormStatus("success");
         } else {
-          console.log("er");
           setFormStatus("error");
         }
       })
       .catch(() => {
         setFormStatus("error");
-        console.log("errrr");
       });
   }
   return (
