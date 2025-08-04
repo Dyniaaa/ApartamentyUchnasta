@@ -58,9 +58,10 @@
     }
   }
 
-  .gallery2container {
+  .galleryContainer {
     position: relative;
   }
+
 }
 
 .gallery1 {
@@ -239,7 +240,7 @@
 
 @media screen and (max-width: 1250px) {
   .galleryBox {
-    .gallery1container {
+    .galleryContainer {
       align-items: center;
       flex-direction: column;
 
@@ -275,31 +276,6 @@
           }
         }
       }
-    }
-
-    .gallery2container {
-      align-items: center;
-      flex-direction: column;
-
-      .txtDiv {
-        margin-top: 5rem;
-        align-items: center;
-        position: static;
-        width: 100%;
-
-        p {
-          width: 80%;
-          padding: 2em;
-        }
-
-        a {
-          width: 90%;
-          button {
-            right: 0px;
-            width: 100%;
-          }
-        }
-      }
 
       .gallery2 {
         .image-gallery-content {
@@ -321,24 +297,7 @@
 
 @media screen and (max-width: 600px) {
   .galleryBox {
-    .gallery1container {
-      .txtDiv {
-        span {
-          font-size: 40px;
-        }
-
-        p {
-          font-size: 15px;
-          word-spacing: 7px;
-        }
-
-        button {
-          font-size: 20px;
-        }
-      }
-    }
-
-    .gallery2container {
+    .galleryContainer  {
       .txtDiv {
         span {
           font-size: 40px;

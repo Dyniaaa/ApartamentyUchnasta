@@ -19,12 +19,12 @@ class MainInfoApartmentInfoImg extends Component {
 
           <img
             className="app-img"
-            src={require("./4.Salon1.jpg")}
+            src={require("./IMG_0490.jpg")}
             alt="Apartment"
           />
           <img
             className="app-img-second"
-            src={require("./6.Kuchnia1.jpg")}
+            src={require("./IMG_0374.jpg")}
             alt="Apartment"
           />
         </section>
