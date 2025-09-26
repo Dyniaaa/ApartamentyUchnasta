@@ -191,23 +191,26 @@ class MyGallery extends React.Component {
   };
 
   render() {
-    const { gallery1Loaded, gallery2Loaded, gallery3Loaded, gallery4Loaded } = this.state;
+    const { gallery1Loaded, gallery2Loaded, gallery3Loaded, gallery4Loaded } =
+      this.state;
 
     return (
       <div className="galleryBox">
-         {!gallery3Loaded && <div className="loader"></div>}
+        {!gallery3Loaded && <div className="loader"></div>}
         <div
           className={`galleryContainer ${
             gallery3Loaded ? "visible" : "hidden"
           }`}
         >
           <div className="txtDiv">
-            <span>APARTAMENT&nbsp;0.2</span>
+            <span>
+              APARTAMENT&nbsp;<span>0.2</span>
+            </span>
             <p>
               Sypialnia z 2 łóżkami pojedynczymi z możliwością połączenia w
               łóżko małżeńskie, salon z kanapą z możliwością spania dla 1 osoby.
-              W pełni wyposażona kuchnia. Łazienka z prysznicem. Apartament na parterze.
-              Powierzchnia&nbsp;-&nbsp;32&nbsp;m².
+              W pełni wyposażona kuchnia. Łazienka z prysznicem. Apartament na
+              parterze. Powierzchnia&nbsp;-&nbsp;32&nbsp;m².
             </p>
             <a href="tel:884875800">
               <button>
@@ -247,7 +250,9 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv">
-            <span>APARTAMENT&nbsp;1.1</span>
+            <span>
+              APARTAMENT&nbsp;<span>1.1</span>
+            </span>
             <p>
               Sypialnia z łóżkiem małżeńskim, salon z kanapą z możliwością
               spania dla 2 osób. W pełni wyposażona kuchnia. Łazienka z
@@ -293,7 +298,9 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv ndtxt">
-            <span>APARTAMENT&nbsp;2.1</span>
+            <span>
+              APARTAMENT&nbsp;<span>2.1</span>
+            </span>
             <p>
               Sypialnia z 2 łóżkami pojedynczymi z możliwością połączenia w
               łóżko małżeńskie, salon z kanapą z możliwością spania dla 2 osób.
@@ -336,10 +343,12 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv">
-            <span>APARTAMENT&nbsp;0.1</span>
+            <span>
+              APARTAMENT&nbsp;<span>0.1</span>
+            </span>
             <p>
-              Studio z łóżkiem małżeńskim oraz w pełni wyposażonym aneksem kuchennym. Łazienka z
-              prysznicem. Apartament na parterze.
+              Studio z łóżkiem małżeńskim oraz w pełni wyposażonym aneksem
+              kuchennym. Łazienka z prysznicem. Apartament na parterze.
               Powierzchnia&nbsp;-&nbsp;22&nbsp;m².
             </p>
             <a href="tel:884875800">
