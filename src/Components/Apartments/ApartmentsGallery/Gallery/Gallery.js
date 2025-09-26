@@ -202,7 +202,7 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv">
-            <span>APARTAMENT&nbsp;I</span>
+            <span>APARTAMENT&nbsp;0.2</span>
             <p>
               Sypialnia z 2 łóżkami pojedynczymi z możliwością połączenia w
               łóżko małżeńskie, salon z kanapą z możliwością spania dla 1 osoby.
@@ -247,7 +247,7 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv">
-            <span>APARTAMENT&nbsp;II</span>
+            <span>APARTAMENT&nbsp;1.1</span>
             <p>
               Sypialnia z łóżkiem małżeńskim, salon z kanapą z możliwością
               spania dla 2 osób. W pełni wyposażona kuchnia. Łazienka z
@@ -293,7 +293,7 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv ndtxt">
-            <span>APARTAMENT&nbsp;III</span>
+            <span>APARTAMENT&nbsp;2.1</span>
             <p>
               Sypialnia z 2 łóżkami pojedynczymi z możliwością połączenia w
               łóżko małżeńskie, salon z kanapą z możliwością spania dla 2 osób.
@@ -336,7 +336,7 @@ class MyGallery extends React.Component {
           }`}
         >
           <div className="txtDiv">
-            <span>STUDIO&nbsp;IV</span>
+            <span>APARTAMENT&nbsp;0.1</span>
             <p>
               Studio z łóżkiem małżeńskim oraz w pełni wyposażonym aneksem kuchennym. Łazienka z
               prysznicem. Apartament na parterze.
