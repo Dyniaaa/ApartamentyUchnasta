@@ -15,19 +15,27 @@
     .howToGetHereTitle {
       font-size: 1.5em;
       padding-bottom: 1em;
-      border-bottom: 2px orange solid;
+      border-bottom: 3px solid #b5a183;
       margin-bottom: 0.5em;
+      color: #8d7a5e;
+      font-weight: 600;
     }
 
     p {
       margin: 0.3em;
+      color: #555;
     }
 
     a {
-      color: black;
+      color: #8d7a5e;
       text-decoration: none;
       font-size: 1em;
       margin: 0.3em;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #b5a183;
+      }
     }
 
     div {
@@ -43,6 +51,9 @@
 
   .contactMapDiv {
     width: 70%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -62,20 +73,27 @@
 @media screen and (max-width: 599px) {
   .howToGetHere {
     flex-direction: column;
+    margin: 2em 0;
 
     .psDiv {
       width: 100%;
+
+      .howToGetHereTitle {
+        font-size: 1.3em;
+      }
+
       p {
-        font-size: 18px;
+        font-size: 1rem;
       }
 
       a {
-        font-size: 18px;
+        font-size: 1rem;
       }
     }
 
     .contactMapDiv {
       width: 100%;
+      border-radius: 8px;
     }
   }
 }

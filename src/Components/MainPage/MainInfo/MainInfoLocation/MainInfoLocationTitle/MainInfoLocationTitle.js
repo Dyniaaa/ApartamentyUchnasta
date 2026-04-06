@@ -9,19 +9,34 @@ class MainInfoLocationTitle extends Component {
         <div className="activity_icons">
           <NavLink to={"/Busko"} onClick={() => window.scrollTo(0, 0)}>
             <div className="activity_icons-box">
-              <img src={require("./img/teznia.png")} alt="teznia"></img>
+              <img
+                src={require("./img/teznia.png")}
+                alt="teznia"
+                loading="lazy"
+                decoding="async"
+              ></img>
               <p>Tężnia</p>
             </div>
           </NavLink>
           <NavLink to={"/Busko"} onClick={() => window.scrollTo(0, 0)}>
             <div className="activity_icons-box">
-              <img src={require("./img/aleja.png")} alt="teznia"></img>
+              <img
+                src={require("./img/aleja.png")}
+                alt="teznia"
+                loading="lazy"
+                decoding="async"
+              ></img>
               <p>Deptak Mickiewicza</p>
             </div>
           </NavLink>
           <NavLink to={"/Busko"} onClick={() => window.scrollTo(0, 0)}>
             <div className="activity_icons-box">
-              <img src={require("./img/buskoland.png")} alt="teznia"></img>
+              <img
+                src={require("./img/buskoland.png")}
+                alt="teznia"
+                loading="lazy"
+                decoding="async"
+              ></img>
               <p>BuskoLand</p>
             </div>
           </NavLink>

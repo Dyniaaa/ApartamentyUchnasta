@@ -18,85 +18,89 @@
       width: 100%;
 
       input {
-        font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-          "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-        padding: 5px;
-        padding-left: 10px;
+        font-family:
+          "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+          "Droid Sans", "Helvetica Neue", sans-serif;
+        padding: 12px 15px;
         width: 70%;
-        margin: 0.2em;
-        border: none;
-        background-color: rgb(229, 235, 237);
-      }
+        margin: 0.5em 0.2em;
+        border: 2px solid #e0e0e0;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
 
-      input:hover {
-        background-color: rgb(204, 204, 204);
+        &:focus {
+          outline: none;
+          border-color: #b5a183;
+          background-color: white;
+          box-shadow: 0 0 0 3px rgba(181, 161, 131, 0.1);
+        }
+
+        &:hover {
+          border-color: #b5a183;
+          background-color: white;
+        }
       }
 
       textarea {
-        font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-          "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-        padding: 5px;
-        padding-left: 10px;
+        font-family:
+          "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+          "Droid Sans", "Helvetica Neue", sans-serif;
+        padding: 12px 15px;
         width: 70%;
-        resize: none;
-        min-height: 5em;
-        margin: 0.2em;
-        border: none;
-        background-color: rgb(229, 235, 237);
-      }
+        resize: vertical;
+        min-height: 8em;
+        margin: 0.5em 0.2em;
+        border: 2px solid #e0e0e0;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
 
-      textarea:hover {
-        background-color: rgb(204, 204, 204);
+        &:focus {
+          outline: none;
+          border-color: #b5a183;
+          background-color: white;
+          box-shadow: 0 0 0 3px rgba(181, 161, 131, 0.1);
+        }
+
+        &:hover {
+          border-color: #b5a183;
+          background-color: white;
+        }
       }
     }
 
     button {
-      align-items: center;
-      background-color: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 0.25rem;
-      box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-      box-sizing: border-box;
-      color: rgba(0, 0, 0, 0.85);
+      background: linear-gradient(135deg, #8d7a5e 0%, #b5a183 100%);
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(141, 122, 94, 0.3);
+      color: white;
       cursor: pointer;
-      display: inline-flex;
-      font-family: system-ui, -apple-system, system-ui, "Helvetica Neue",
-        Helvetica, Arial, sans-serif;
-      font-size: 16px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
       font-weight: 600;
-      justify-content: center;
-      line-height: 1.25;
-      margin: 0;
-      min-height: 3rem;
-      padding: 0px 25px;
-      margin: 20px;
-      position: relative;
-      text-decoration: none;
-      transition: all 250ms;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-      vertical-align: baseline;
-      width: auto;
-    }
+      padding: 1rem 2.5rem;
+      margin: 30px 0 20px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
 
-    button:focus {
-      border-color: rgba(0, 0, 0, 0.15);
-      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-      color: rgba(0, 0, 0, 0.65);
-    }
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(141, 122, 94, 0.4);
+      }
 
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 2px 2px 2px lightgray;
-    }
+      &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(141, 122, 94, 0.3);
+      }
 
-    button:active {
-      background-color: #f0f0f1;
-      border-color: rgba(0, 0, 0, 0.15);
-      box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-      color: rgba(0, 0, 0, 0.65);
-      transform: translateY(0);
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(181, 161, 131, 0.3);
+      }
     }
   }
 
@@ -107,16 +111,16 @@
     border-radius: 10px;
     width: 40%;
     padding: 1rem;
-  };
+  }
 
-   .error {
+  .error {
     text-align: center;
     background-color: rgb(255 236 236);
     border: 1px solid red;
     border-radius: 10px;
     width: 40%;
     padding: 1rem;
-  };
+  }
 
   @media screen and (max-width: 599px) {
     .success {

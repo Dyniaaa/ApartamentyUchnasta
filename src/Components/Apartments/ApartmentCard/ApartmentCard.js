@@ -14,6 +14,8 @@ const ApartmentCard = ({ apartment }) => {
           src={apartment.thumbnail}
           alt={apartment.title}
           className="apartment-card__image"
+          loading="lazy"
+          decoding="async"
         />
         <div className="apartment-card__overlay">
           <div className="apartment-card__overlay-content">

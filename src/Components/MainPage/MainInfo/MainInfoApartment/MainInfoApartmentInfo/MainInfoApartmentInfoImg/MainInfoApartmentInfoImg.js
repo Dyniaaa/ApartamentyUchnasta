@@ -12,8 +12,8 @@ class MainInfoApartmentInfoImg extends Component {
             <p>
               {" "}
               Oferujemy w pełni wyposażone apartamenty w Busku-Zdroju, blisko
-              tężni solankowych, z dostępem do naszego zielonego podwórka, grilla i
-              parkingu.
+              tężni solankowych, z dostępem do naszego zielonego podwórka,
+              grilla i parkingu.
             </p>
           </div>
 
@@ -21,11 +21,15 @@ class MainInfoApartmentInfoImg extends Component {
             className="app-img"
             src={require("./IMG_0490.jpg")}
             alt="Apartment"
+            loading="lazy"
+            decoding="async"
           />
           <img
             className="app-img-second"
             src={require("./IMG_0374.jpg")}
             alt="Apartment"
+            loading="lazy"
+            decoding="async"
           />
         </section>
       </Fade>

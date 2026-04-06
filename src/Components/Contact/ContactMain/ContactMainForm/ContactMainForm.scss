@@ -1,6 +1,9 @@
 .contactMainForm {
   background-color: white;
   width: 65%;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 
   .contactUsDiv {
     display: flex;
@@ -15,12 +18,13 @@
       margin-left: 2em;
 
       p {
-        color: #4a4339;
+        color: #8d7a5e;
         padding-top: 50px;
         text-align: center;
         font-size: 1.5em;
         padding-bottom: 1em;
-        border-bottom: 2px orange solid;
+        border-bottom: 3px solid #b5a183;
+        font-weight: 600;
       }
     }
 
@@ -34,7 +38,7 @@
 
 @media screen and (min-width: 599px) and (max-width: 1023px) {
   .contactMainForm {
-  width: 90%;
+    width: 85%;
 
     .contactUsDiv {
       .askUsDiv {
@@ -49,24 +53,29 @@
 @media screen and (max-width: 599px) {
   .contactMainForm {
     width: 95%;
+    border-radius: 12px;
 
     .contactUsDiv {
       flex-direction: column;
       width: 100%;
+      margin: 2em 0;
 
       .askUsDiv {
         width: 100%;
         margin-left: 0em;
+
         p {
-          padding-top:0;
+          padding-top: 0;
+          font-size: 1.3em;
         }
       }
 
       .formDiv {
         width: 100%;
-        
-        input, textarea {
-          width: 80%;
+
+        input,
+        textarea {
+          width: 85%;
         }
       }
     }

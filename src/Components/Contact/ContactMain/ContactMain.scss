@@ -1,11 +1,16 @@
 .contactMain {
   color: #4a4339;
-  background-image: url("./Busko.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
+  background: #eee3d3;
+  min-height: 100vh;
+  padding: 6rem 20px 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+
+@media screen and (max-width: 599px) {
+  .contactMain {
+    padding: 5rem 15px 2rem;
+  }
 }
