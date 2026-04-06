@@ -1,14 +1,43 @@
+html,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Playfair Display", serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+// Global styles for react-image-gallery - brown arrows on hover
+.image-gallery-icon {
+  &:hover {
+    color: #b5a183 !important;
+  }
+}
+
+.image-gallery-svg {
+  &:hover {
+    stroke: #b5a183 !important;
+  }
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  &:hover {
+    .image-gallery-svg {
+      stroke: #b5a183 !important;
+    }
+  }
 }

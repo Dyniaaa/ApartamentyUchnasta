@@ -92,7 +92,7 @@ class Footer extends Component {
           </div>
         </div>
         <div className="logoDiv">
-          <img src={require("./LogoBusko.png")} alt="Logo Apartamenty Busko" />
+          <img src={require("./LogoBusko2.png")} alt="Logo Apartamenty Busko" />
         </div>
       </section>
     );

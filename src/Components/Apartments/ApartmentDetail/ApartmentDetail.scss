@@ -1,0 +1,602 @@
+.apartment-detail-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding-top: 5rem;
+}
+
+.breadcrumb {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #666;
+
+  a {
+    color: #b5a183;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #8d7a5e;
+    }
+  }
+
+  span:last-child {
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+.apartment-detail-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+
+  .header-content {
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      color: #8d7a5e;
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.1rem;
+      color: #666;
+
+      .divider {
+        color: #ccc;
+      }
+
+      .surface,
+      .capacity {
+        font-weight: 600;
+        color: #b5a183;
+      }
+    }
+  }
+}
+
+.gallery-description-wrapper {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.gallery-section {
+  width: 100%;
+}
+
+.apartment-detail-gallery {
+  position: relative;
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #b5a183;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 4rem auto;
+  }
+
+  .gallery-wrapper {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.description-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description-box-brown {
+  background: linear-gradient(135deg, #8d7a5e 0%, #b5a183 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  h2 {
+    font-size: 1.75rem;
+    color: white;
+    margin: 0 0 1.5rem 0;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0;
+    opacity: 0.95;
+  }
+}
+
+.booking-card-side {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 2px solid #e5e7eb;
+
+  h3 {
+    font-size: 1.75rem;
+    color: #8d7a5e;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    color: #666;
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, #8d7a5e 0%, #b5a183 100%);
+    color: white;
+    padding: 1.25rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 0 2rem 0;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  .checkin-info {
+    padding-top: 1.5rem;
+    border-top: 2px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #555;
+
+      strong {
+        font-weight: 600;
+        color: #8d7a5e;
+      }
+    }
+
+    .flexible-time {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 12px;
+      border: 2px solid #b5a183;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+
+      svg {
+        color: #b5a183;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.facilities-wrapper-full {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+}
+
+.apartment-facilities {
+  h2 {
+    font-size: 2rem;
+    color: #8d7a5e;
+    margin: 0 0 2rem 0;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #b5a183;
+    padding-bottom: 1rem;
+  }
+
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .facility-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 2px solid transparent;
+
+    svg {
+      color: #b5a183;
+      flex-shrink: 0;
+    }
+
+    span {
+      font-size: 1rem;
+      color: #4a4339;
+      font-weight: 500;
+    }
+  }
+}
+
+.back-button-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    background: #f9fafb;
+    color: #8d7a5e;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #e5e7eb;
+
+    &:hover {
+      background: #b5a183;
+      color: white;
+      border-color: #b5a183;
+      transform: translateX(-4px);
+    }
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(-4px);
+    }
+  }
+}
+
+// Custom styles for image gallery arrows - brown color on hover
+.apartment-detail-page {
+  // Override default blue color for gallery navigation
+  .image-gallery-icon {
+    filter: none;
+
+    &:hover {
+      color: #b5a183 !important;
+    }
+  }
+
+  .image-gallery-svg {
+    &:hover {
+      stroke: #b5a183 !important;
+    }
+  }
+
+  .image-gallery-left-nav,
+  .image-gallery-right-nav {
+    &:hover {
+      .image-gallery-svg {
+        stroke: #b5a183 !important;
+      }
+    }
+  }
+}
+
+// Custom styles for image gallery arrows
+.apartment-detail-gallery {
+  .image-gallery-icon {
+    &:hover {
+      color: #b5a183 !important;
+    }
+  }
+
+  .image-gallery-left-nav,
+  .image-gallery-right-nav {
+    &:hover::before {
+      color: #b5a183 !important;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Responsive
+@media (max-width: 1024px) {
+  .gallery-description-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .facilities-wrapper-full {
+    padding: 0 1.5rem;
+  }
+
+  .apartment-facilities {
+    .facilities-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .apartment-detail-header {
+    padding: 1.5rem 1rem 2rem;
+
+    .header-content {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .header-info {
+        flex-wrap: wrap;
+        font-size: 0.95rem;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .gallery-description-wrapper {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .gallery-section {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .description-box-brown {
+    padding: 1.75rem;
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+  }
+
+  .booking-card-side {
+    padding: 1.75rem;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    .cta-button {
+      font-size: 1rem;
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  .facilities-wrapper-full {
+    padding: 0 1rem;
+  }
+
+  .apartment-facilities {
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+
+    .facilities-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .facility-item {
+      padding: 1.25rem;
+      gap: 0.75rem;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .apartment-detail-content {
+    padding: 0 1rem 3rem;
+
+    .content-grid {
+      gap: 2rem;
+    }
+  }
+
+  .description-section {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .breadcrumb {
+    padding: 1rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .back-button-container {
+    padding: 0 1.5rem 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apartment-detail-page {
+    padding-top: 4.5rem;
+  }
+
+  .apartment-detail-header {
+    padding: 1rem 0.75rem 1.25rem;
+
+    .header-content {
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .header-info {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        .divider {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .breadcrumb {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .gallery-description-wrapper {
+    padding: 0 0.75rem;
+    gap: 1.25rem;
+  }
+
+  .description-box-brown {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  .booking-card-side {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .cta-button {
+      font-size: 0.95rem;
+      padding: 0.875rem 1.25rem;
+    }
+
+    .checkin-info {
+      font-size: 0.85rem;
+    }
+  }
+
+  .facilities-wrapper-full {
+    padding: 0 0.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .apartment-facilities {
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .facilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .facility-item {
+      padding: 0.75rem 0.5rem;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .back-button-container {
+    padding: 0 0.75rem 3rem;
+
+    .back-button {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+    }
+  }
+}

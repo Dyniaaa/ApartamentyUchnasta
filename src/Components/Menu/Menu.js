@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { getAllApartments } from "../../data/apartmentsData";
 import "./Menu.scss";
 
 class Menu extends Component {
@@ -7,8 +8,18 @@ class Menu extends Component {
     super();
     this.state = {
       Menu: false,
+      apartmentsDropdownOpen: false,
+      apartmentsExpandedMobile: false,
     };
+    this.apartments = getAllApartments();
   }
+
+  toggleApartmentsMobile = (e) => {
+    e.preventDefault();
+    this.setState((prevState) => ({
+      apartmentsExpandedMobile: !prevState.apartmentsExpandedMobile,
+    }));
+  };
 
   handleClick = () => {
     this.setState((prevState) => ({
@@ -34,7 +45,18 @@ class Menu extends Component {
     }
   };
 
+  handleMouseEnter = () => {
+    this.setState({ apartmentsDropdownOpen: true });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({ apartmentsDropdownOpen: false });
+  };
+
   render() {
+    const { apartmentsDropdownOpen } = this.state;
+    const isOnApartmentPage = window.location.pathname.includes("/Apartament");
+
     return (
       <div>
         <div className="menu">
@@ -59,14 +81,67 @@ class Menu extends Component {
                 Strona Główna
               </NavLink>
             </li>
-            <li>
+            <li
+              className="dropdown-menu-item"
+              onMouseEnter={this.handleMouseEnter}
+              onMouseLeave={this.handleMouseLeave}
+            >
               <NavLink
                 to={"/Apartament"}
                 className={"listElement"}
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Apartamenty
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="dropdown-arrow"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
               </NavLink>
+              {apartmentsDropdownOpen && (
+                <div className="dropdown-content">
+                  <NavLink
+                    to={"/Apartament"}
+                    onClick={() => window.scrollTo(0, 0)}
+                    className="dropdown-link all-apartments"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    </svg>
+                    Wszystkie apartamenty
+                  </NavLink>
+                  <div className="dropdown-divider"></div>
+                  {this.apartments.map((apt) => (
+                    <NavLink
+                      key={apt.id}
+                      to={`/Apartament/${apt.id}`}
+                      onClick={() => window.scrollTo(0, 0)}
+                      className="dropdown-link"
+                    >
+                      Apartament {apt.name}
+                    </NavLink>
+                  ))}
+                </div>
+              )}
             </li>
             <li>
               <NavLink
@@ -89,7 +164,7 @@ class Menu extends Component {
           </ul>
           <div className="phoneMenu hide">
             <ul className="phoneUl">
-              <li> 
+              <li>
                 <NavLink
                   to={"/"}
                   className={"listElement"}
@@ -99,13 +174,54 @@ class Menu extends Component {
                 </NavLink>
               </li>
               <li>
-                <NavLink
-                  to={"/Apartament"}
-                  className={"listElement"}
-                  onClick={() => window.scrollTo(0, 0)}
+                <div
+                  className={`listElement apartment-toggle ${isOnApartmentPage ? "active" : ""}`}
+                  onClick={this.toggleApartmentsMobile}
                 >
                   Apartamenty
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={`mobile-dropdown-arrow ${this.state.apartmentsExpandedMobile ? "expanded" : ""}`}
+                  >
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </div>
+              </li>
+              <li
+                className={`phone-apartments-wrapper ${this.state.apartmentsExpandedMobile ? "expanded" : ""}`}
+              >
+                <NavLink
+                  to={"/Apartament"}
+                  end
+                  className={"listElement phone-all-apts"}
+                  onClick={(e) => {
+                    window.scrollTo(0, 0);
+                    this.handleClick();
+                  }}
+                >
+                  → Wszystkie apartamenty
                 </NavLink>
+                {this.apartments.map((apt) => (
+                  <NavLink
+                    key={apt.id}
+                    to={`/Apartament/${apt.id}`}
+                    className={"listElement phone-sub-element"}
+                    onClick={(e) => {
+                      window.scrollTo(0, 0);
+                      this.handleClick();
+                    }}
+                  >
+                    → Apartament {apt.name}
+                  </NavLink>
+                ))}
               </li>
               <li>
                 <NavLink

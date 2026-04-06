@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  background-color: rgb(201 190 154);
+  background: linear-gradient(135deg, #8d7a5e 0%, #b5a183 100%);
   padding: 40px;
 
   div {
@@ -25,7 +25,6 @@
   & div:last-of-type {
     width: 48%;
     height: 100%;
-    background-color: rgb(201 190 154);
     align-items: start;
 
     h2 {
@@ -56,7 +55,7 @@
       width: 80%;
       text-align: left;
 
-      p{
+      p {
         padding-right: 0px;
       }
     }
