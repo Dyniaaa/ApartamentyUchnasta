@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.653e9f7b.css",
+    "main.js": "/static/js/main.59a52741.js",
+    "static/js/453.e9e7ec89.chunk.js": "/static/js/453.e9e7ec89.chunk.js",
+    "static/media/IMG_0490.jpg": "/static/media/IMG_0490.89936b1b0261a5276a62.jpg",
+    "static/media/Busko-Zdroj.jpg": "/static/media/Busko-Zdroj.7ce977faa548e4f2a42d.jpg",
+    "static/media/buskoland.jpg": "/static/media/buskoland.e2124604850871eb18dc.jpg",
+    "static/media/IMG_0374.jpg": "/static/media/IMG_0374.6d46eab39df1e7ac0c81.jpg",
+    "static/media/alley.jpg": "/static/media/alley.2d2af887210f801b8f54.jpg",
+    "static/media/graduationTower.jpg": "/static/media/graduationTower.64dcaeb54925d3584f3a.jpg",
+    "static/media/uzdrowisko.jpg": "/static/media/uzdrowisko.269dfa8023eecfca7c4f.jpg",
+    "static/media/natureReserve.jpg": "/static/media/natureReserve.9fb18bf66f729a48aceb.jpg",
+    "static/media/marconi.jpg": "/static/media/marconi.e48a595fca52f5f0ca2c.jpg",
+    "static/media/buskoland.png": "/static/media/buskoland.db64d4d4b7ade7d700c3.png",
+    "static/media/teznia.png": "/static/media/teznia.0fe740e88b39c7ca4ecd.png",
+    "static/media/aleja.png": "/static/media/aleja.49ef813b3c3958ae67d3.png",
+    "static/media/LogoBusko2.png": "/static/media/LogoBusko2.312fba14c980739fede3.png",
+    "static/media/LogoBusko.png": "/static/media/LogoBusko.10830a012d51b4a3b39f.png",
+    "index.html": "/index.html",
+    "main.653e9f7b.css.map": "/static/css/main.653e9f7b.css.map",
+    "main.59a52741.js.map": "/static/js/main.59a52741.js.map",
+    "453.e9e7ec89.chunk.js.map": "/static/js/453.e9e7ec89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.653e9f7b.css",
+    "static/js/main.59a52741.js"
+  ]
+}
