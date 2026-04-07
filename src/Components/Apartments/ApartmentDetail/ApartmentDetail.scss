@@ -2,6 +2,22 @@
   min-height: 100vh;
   background: #ffffff;
   padding-top: 5rem;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden; // Prevent horizontal scroll from any child
+
+  // Force all children to respect max width
+  * {
+    max-width: 100%;
+  }
+
+  // But allow absolutely positioned elements (like gallery arrows) to be visible
+  .image-gallery-left-nav,
+  .image-gallery-right-nav,
+  .image-gallery-icon {
+    max-width: none !important;
+  }
 }
 
 .breadcrumb {
@@ -75,14 +91,30 @@
   grid-template-columns: 1.5fr 1fr;
   gap: 3rem;
   align-items: start;
+  width: calc(100% - 4rem); // Account for padding
+  box-sizing: border-box;
 }
 
 .gallery-section {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0; // Important for grid child
+
+  // Ensure Fade wrapper from react-awesome-reveal doesn't break layout
+  > div {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
 }
 
 .apartment-detail-gallery {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  box-sizing: border-box;
 
   .loader {
     width: 50px;
@@ -97,6 +129,10 @@
   .gallery-wrapper {
     opacity: 0;
     transition: opacity 0.5s ease;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; // Prevent gallery from expanding beyond wrapper
 
     &.visible {
       opacity: 1;
@@ -106,12 +142,89 @@
       display: none;
     }
   }
+
+  // Target the custom class we added
+  .apartment-gallery {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  // Force react-image-gallery to respect container width
+  .image-gallery {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .image-gallery-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .image-gallery-slide-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .image-gallery-slides {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .image-gallery-slide {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    img {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+  }
+
+  // Force navigation arrows to stay within bounds
+  .image-gallery-left-nav,
+  .image-gallery-right-nav {
+    position: absolute !important;
+  }
+
+  // Thumbnails container
+  .image-gallery-thumbnails-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .image-gallery-thumbnails {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    .image-gallery-thumbnail {
+      max-width: 100px !important;
+
+      img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
 }
 
 .description-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .description-box-brown {
@@ -120,6 +233,9 @@
   padding: 2.5rem;
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 
   h2 {
     font-size: 1.75rem;
@@ -142,6 +258,9 @@
   border-radius: 16px;
   padding: 2.5rem;
   border: 2px solid #e5e7eb;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 
   h3 {
     font-size: 1.75rem;
@@ -400,13 +519,23 @@
   }
 
   .gallery-description-wrapper {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     gap: 1.5rem;
+    width: calc(100% - 1.5rem); // Account for padding
+    box-sizing: border-box;
   }
 
   .gallery-section {
     width: 100%;
-    overflow: hidden;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .description-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .description-box-brown {
@@ -530,6 +659,8 @@
   .gallery-description-wrapper {
     padding: 0 0.75rem;
     gap: 1.25rem;
+    width: calc(100% - 1.5rem); // Account for padding
+    box-sizing: border-box;
   }
 
   .description-box-brown {

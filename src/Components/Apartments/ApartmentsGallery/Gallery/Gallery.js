@@ -237,7 +237,7 @@ class MyGallery extends React.Component {
           <ImageGallery
             items={images3}
             showPlayButton={false}
-            showFullscreenButton={false}
+            showFullscreenButton={true}
             additionalClass={"gallery1"}
             lazyLoad={true}
             onImageLoad={this.handleThirdGalleryLoad}
@@ -284,7 +284,7 @@ class MyGallery extends React.Component {
           <ImageGallery
             items={images1}
             showPlayButton={false}
-            showFullscreenButton={false}
+            showFullscreenButton={true}
             additionalClass={"gallery1"}
             lazyLoad={true}
             onImageLoad={this.handleFirstGalleryLoad}
@@ -331,7 +331,7 @@ class MyGallery extends React.Component {
           <ImageGallery
             items={images2}
             showPlayButton={false}
-            showFullscreenButton={false}
+            showFullscreenButton={true}
             additionalClass={"gallery2"}
             onImageLoad={this.handleSecondGalleryLoad}
           />
@@ -376,7 +376,7 @@ class MyGallery extends React.Component {
           <ImageGallery
             items={images4}
             showPlayButton={false}
-            showFullscreenButton={false}
+            showFullscreenButton={true}
             additionalClass={"gallery1"}
             lazyLoad={true}
             onImageLoad={this.handleFourthGalleryLoad}

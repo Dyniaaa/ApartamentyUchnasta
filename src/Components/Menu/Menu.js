@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 import { getAllApartments } from "../../data/apartmentsData";
 import "./Menu.scss";
 
@@ -53,9 +54,16 @@ class Menu extends Component {
     this.setState({ apartmentsDropdownOpen: false });
   };
 
+  handleLanguageChange = (lang) => {
+    const { i18n } = this.props;
+    i18n.changeLanguage(lang);
+  };
+
   render() {
     const { apartmentsDropdownOpen } = this.state;
     const isOnApartmentPage = window.location.pathname.includes("/Apartament");
+    const { t, i18n } = this.props;
+    const currentLang = i18n.language;
 
     return (
       <div>
@@ -66,6 +74,21 @@ class Menu extends Component {
               alt="Logo Apartamenty Uchnasta"
             />
           </NavLink>
+          <div className="language-switcher">
+            <button
+              className={`lang-btn ${currentLang === "pl" ? "active" : ""}`}
+              onClick={() => this.handleLanguageChange("pl")}
+            >
+              PL
+            </button>
+            <span className="lang-separator">|</span>
+            <button
+              className={`lang-btn ${currentLang === "en" ? "active" : ""}`}
+              onClick={() => this.handleLanguageChange("en")}
+            >
+              EN
+            </button>
+          </div>
           <div className="phoneMenuIcon" onClick={this.handleClick}>
             <div className="phoneMenuDiv topDiv "></div>
             <div className="phoneMenuDiv midDiv "></div>
@@ -78,7 +101,7 @@ class Menu extends Component {
                 className={"listElement"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Strona Główna
+                {t("menu.home")}
               </NavLink>
             </li>
             <li
@@ -91,7 +114,7 @@ class Menu extends Component {
                 className={"listElement"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Apartamenty
+                {t("menu.apartments")}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -127,7 +150,7 @@ class Menu extends Component {
                     >
                       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                     </svg>
-                    Wszystkie apartamenty
+                    {t("menu.allApartments")}
                   </NavLink>
                   <div className="dropdown-divider"></div>
                   {this.apartments.map((apt) => (
@@ -137,7 +160,7 @@ class Menu extends Component {
                       onClick={() => window.scrollTo(0, 0)}
                       className="dropdown-link"
                     >
-                      Apartament {apt.name}
+                      {t("menu.apartment")} {apt.name}
                     </NavLink>
                   ))}
                 </div>
@@ -149,7 +172,7 @@ class Menu extends Component {
                 className={"listElement"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Atrakcje
+                {t("menu.attractions")}
               </NavLink>
             </li>
             <li>
@@ -158,7 +181,7 @@ class Menu extends Component {
                 className={"listElement"}
                 onClick={() => window.scrollTo(0, 0)}
               >
-                Kontakt
+                {t("menu.contact")}
               </NavLink>
             </li>
           </ul>
@@ -170,7 +193,7 @@ class Menu extends Component {
                   className={"listElement"}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Strona Główna
+                  {t("menu.home")}
                 </NavLink>
               </li>
               <li>
@@ -178,7 +201,7 @@ class Menu extends Component {
                   className={`listElement apartment-toggle ${isOnApartmentPage ? "active" : ""}`}
                   onClick={this.toggleApartmentsMobile}
                 >
-                  Apartamenty
+                  {t("menu.apartments")}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -207,7 +230,7 @@ class Menu extends Component {
                     this.handleClick();
                   }}
                 >
-                  → Wszystkie apartamenty
+                  → {t("menu.allApartments")}
                 </NavLink>
                 {this.apartments.map((apt) => (
                   <NavLink
@@ -219,7 +242,7 @@ class Menu extends Component {
                       this.handleClick();
                     }}
                   >
-                    → Apartament {apt.name}
+                    → {t("menu.apartment")} {apt.name}
                   </NavLink>
                 ))}
               </li>
@@ -229,7 +252,7 @@ class Menu extends Component {
                   className={"listElement"}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Busko - Zdrój
+                  {t("menu.attractions")}
                 </NavLink>
               </li>
               <li>
@@ -238,8 +261,25 @@ class Menu extends Component {
                   className={"listElement"}
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Kontakt
+                  {t("menu.contact")}
                 </NavLink>
+              </li>
+              <li className="phone-language-switcher">
+                <div className="language-switcher-mobile">
+                  <button
+                    className={`lang-btn ${currentLang === "pl" ? "active" : ""}`}
+                    onClick={() => this.handleLanguageChange("pl")}
+                  >
+                    PL
+                  </button>
+                  <span className="lang-separator">|</span>
+                  <button
+                    className={`lang-btn ${currentLang === "en" ? "active" : ""}`}
+                    onClick={() => this.handleLanguageChange("en")}
+                  >
+                    EN
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
@@ -249,4 +289,4 @@ class Menu extends Component {
   }
 }
 
-export default Menu;
+export default withTranslation()(Menu);

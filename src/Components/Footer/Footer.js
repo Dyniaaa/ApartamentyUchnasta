@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./Footer.scss";
+import { withTranslation } from "react-i18next";
 
 class Footer extends Component {
   render() {
+    const { t } = this.props;
     return (
       <section className="footer">
         <div className="footerConact">
-          <p className="footerContactTitle">Kontakt</p>
+          <p className="footerContactTitle">{t("menu.contact")}</p>
           <div>
             <div className="contactDiv">
               <svg
@@ -27,7 +29,7 @@ class Footer extends Component {
                 <path d="M3 7l9 6l9 -6" />
               </svg>{" "}
               <NavLink to={"/Contact"} className={"listElement"}>
-                <p className="footerText">Przejdź do Formularza Kontaktowego</p>
+                <p className="footerText">{t("footer.goToContactForm")}</p>
               </NavLink>
             </div>
             <div className="contactDiv">
@@ -99,4 +101,4 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+export default withTranslation()(Footer);

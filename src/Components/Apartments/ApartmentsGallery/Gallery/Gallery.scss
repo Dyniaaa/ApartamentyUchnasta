@@ -6,9 +6,13 @@
   align-items: center;
   justify-content: center;
   padding-top: 7rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 
   div {
     width: 100%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -63,17 +67,21 @@
 
   .galleryContainer {
     position: relative;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 .gallery1 {
   margin-top: 2em;
+  max-width: 100%;
 
   .image-gallery-content {
     height: 60%;
     width: 100%;
     display: flex;
     align-items: flex-start;
+    position: relative;
 
     :hover {
       color: white;
@@ -86,11 +94,21 @@
 
   .image-gallery-right-nav {
     background-color: rgba($color: #000000, $alpha: 0.5);
-    height: 1%;
-    width: 8%;
+    height: 80px;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.7);
+    }
 
     .image-gallery-svg {
       width: 40%;
@@ -99,11 +117,21 @@
 
   .image-gallery-left-nav {
     background-color: rgba($color: #000000, $alpha: 0.5);
-    height: 1%;
-    width: 8%;
+    height: 80px;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.7);
+    }
 
     .image-gallery-svg {
       width: 40%;
@@ -131,12 +159,14 @@
 
 .gallery2 {
   margin-top: 2em;
+  max-width: 100%;
 
   .image-gallery-content {
     height: 60%;
     width: 100%;
     display: flex;
     align-items: flex-start;
+    position: relative;
 
     :hover {
       color: white;
@@ -154,11 +184,21 @@
 
   .image-gallery-right-nav {
     background-color: rgba($color: #000000, $alpha: 0.5);
-    height: 1%;
-    width: 8%;
+    height: 80px;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.7);
+    }
 
     .image-gallery-svg {
       width: 40%;
@@ -167,11 +207,21 @@
 
   .image-gallery-left-nav {
     background-color: rgba($color: #000000, $alpha: 0.5);
-    height: 1%;
-    width: 8%;
+    height: 80px;
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.7);
+    }
 
     .image-gallery-svg {
       width: 40%;
@@ -210,8 +260,9 @@
 .loader,
 .loader:before,
 .loader:after {
-  background: radial-gradient(closest-side at 50% 12.5%, #b5a183 96%, #0000) 50%
-      0/20% 80% repeat-y,
+  background:
+    radial-gradient(closest-side at 50% 12.5%, #b5a183 96%, #0000) 50% 0/20% 80%
+      repeat-y,
     radial-gradient(closest-side at 12.5% 50%, #b5a183 96%, #0000) 0 50%/80% 20%
       repeat-x;
 }
@@ -245,6 +296,8 @@
     .galleryContainer {
       align-items: center;
       flex-direction: column;
+      width: 100%;
+      max-width: 100%;
 
       .txtDiv {
         align-items: center;
@@ -265,6 +318,8 @@
       }
 
       .gallery1 {
+        width: 100%;
+
         .image-gallery-content {
           align-items: center;
 
@@ -277,9 +332,17 @@
             width: 8rem;
           }
         }
+
+        .image-gallery-right-nav,
+        .image-gallery-left-nav {
+          width: 50px !important;
+          height: 60px !important;
+        }
       }
 
       .gallery2 {
+        width: 100%;
+
         .image-gallery-content {
           align-items: center;
 
@@ -291,6 +354,12 @@
             height: 8rem;
             width: 8rem;
           }
+        }
+
+        .image-gallery-right-nav,
+        .image-gallery-left-nav {
+          width: 50px !important;
+          height: 60px !important;
         }
       }
     }
@@ -299,21 +368,151 @@
 
 @media screen and (max-width: 600px) {
   .galleryBox {
+    padding-top: 5rem;
+    width: 100%;
+    max-width: 100vw;
+
     .galleryContainer {
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
+
       .txtDiv {
+        position: static;
+        width: 90%;
+        margin: 0 auto 2rem;
+
         span {
-          font-size: 40px;
+          font-size: 35px;
+
+          span {
+            font-size: 50px;
+          }
         }
 
         p {
-          font-size: 15px;
-          word-spacing: 7px;
+          font-size: 14px;
+          word-spacing: 5px;
+          padding: 1.5rem;
         }
 
         button {
-          font-size: 20px;
+          font-size: 16px;
+          padding: 1rem;
+          bottom: 0;
+          right: 0;
         }
       }
+    }
+  }
+
+  .gallery1,
+  .gallery2 {
+    width: 100%;
+    max-width: 100vw;
+
+    .image-gallery {
+      width: 100%;
+
+      .image-gallery-content {
+        width: 100%;
+        height: auto;
+
+        .image-gallery-slide-wrapper {
+          width: 100% !important;
+
+          .image-gallery-swipe {
+            width: 100%;
+
+            .image-gallery-slides {
+              width: 100%;
+
+              .image-gallery-slide {
+                width: 100%;
+
+                .image-gallery-image {
+                  width: 100%;
+                  height: auto;
+                  max-height: 50vh;
+                  object-fit: contain;
+                  background-color: #f5f5f5;
+                }
+              }
+            }
+          }
+        }
+
+        .image-gallery-thumbnails-wrapper {
+          width: 100%;
+          padding: 10px 0;
+
+          .image-gallery-thumbnails {
+            width: 100%;
+            padding: 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+
+            .image-gallery-thumbnail {
+              width: 70px;
+              height: 70px;
+              margin-right: 5px;
+
+              .image-gallery-thumbnail-inner {
+                .ThumbnailClass {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .image-gallery-right-nav,
+      .image-gallery-left-nav {
+        width: 40px !important;
+        height: 60px !important;
+        padding: 0 !important;
+        top: 25% !important;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.6) !important;
+        }
+
+        .image-gallery-svg {
+          width: 20px !important;
+          height: 20px !important;
+        }
+      }
+
+      .image-gallery-right-nav {
+        right: 5px !important;
+      }
+
+      .image-gallery-left-nav {
+        left: 5px !important;
+      }
+
+      .image-gallery-fullscreen-button,
+      .image-gallery-play-button {
+        bottom: 10px;
+
+        .image-gallery-svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .ThumbnailClass {
+      height: 70px !important;
+      width: 70px !important;
+      min-width: 70px;
+      object-fit: cover;
     }
   }
 }

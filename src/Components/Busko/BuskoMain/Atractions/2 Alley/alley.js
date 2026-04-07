@@ -1,19 +1,15 @@
 import React, { Component } from "react";
 import "./alley.scss";
+import { withTranslation } from "react-i18next";
 
 class Alley extends Component {
   render() {
+    const { t } = this.props;
     return (
       <div className="alley">
         <div>
-          <h2>Aleja Mickiewicza</h2>
-          <p>
-            Aleja Mickiewicza w Busku-Zdroju to zielona, malownicza promenada,
-            będąca sercem miasta i ulubionym miejscem spacerów. Otoczona
-            zabytkowymi budynkami i urokliwymi kawiarniami, oferuje wyjątkową
-            mieszankę kultury, historii i przyrody, tworząc atmosferę relaksu w
-            samym centrum Buska-Zdroju.
-          </p>
+          <h2>{t("attractions.alleyTitle")}</h2>
+          <p>{t("attractions.alleyDesc")}</p>
         </div>
         <div>
           <img src={require("./alley.jpg")} alt="Alley" />
@@ -23,4 +19,4 @@ class Alley extends Component {
   }
 }
 
-export default Alley;
+export default withTranslation()(Alley);

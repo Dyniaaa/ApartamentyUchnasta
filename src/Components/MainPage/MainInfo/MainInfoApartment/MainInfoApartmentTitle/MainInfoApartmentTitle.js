@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import "./MainInfoApartmentTitle.scss";
 import { Fade } from "react-awesome-reveal";
+import { withTranslation } from "react-i18next";
 
 class MainInfoApartmentTitle extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Fade
         className="mainInfoApartmentTitleContainer"
@@ -11,17 +13,12 @@ class MainInfoApartmentTitle extends Component {
         triggerOnce
       >
         <div className="mainInfoApartmentTitle">
-          <p>Apartamenty Uchnasta</p>
-          <p>
-            Zapraszamy do naszego pensjonatu w Busku-Zdroju, słynnym
-            uzdrowiskowym mieście położonym w malowniczym otoczeniu. Oferujemy
-            komfortowy wypoczynek i relaks w pobliżu słynnej buskiej tężni
-            solankowej.
-          </p>
+          <p>{t("apartments.title")}</p>
+          <p>{t("apartments.description")}</p>
         </div>
       </Fade>
     );
   }
 }
 
-export default MainInfoApartmentTitle;
+export default withTranslation()(MainInfoApartmentTitle);

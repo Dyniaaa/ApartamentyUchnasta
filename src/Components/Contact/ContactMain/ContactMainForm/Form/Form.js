@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Form.scss";
+import { withTranslation } from "react-i18next";
 
 class Form extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class Form extends Component {
   };
 
   render() {
+    const { t } = this.props;
     const success = {
       textAlign: "center",
       backgroundColor: "rgb(243 255 244)",
@@ -56,18 +58,17 @@ class Form extends Component {
     return (
       <section className="form">
         {this.state.status === "success" ? (
-          <p style={success}>Wiadomość została wysłana pomyślnie!</p>
+          <p style={success}>{t("contact.successMessage")}</p>
         ) : this.state.status === "error" ? (
-          <p style={error}>Wystąpił błąd podczas wysyłania wiadomości. Skontaktuj się telefonicznie lub spróbuj jeszcze raz</p>
+          <p style={error}>{t("contact.errorMessage")}</p>
         ) : (
-          
           <form onSubmit={this.handleSubmit}>
             <div>
               <input
                 name="name"
                 type="text"
                 id="name"
-                placeholder="Imię"
+                placeholder={t("contact.name")}
                 required
               />
             </div>
@@ -77,7 +78,7 @@ class Form extends Component {
                 name="mail"
                 id="mail"
                 type="text"
-                placeholder="Mail"
+                placeholder={t("contact.email")}
                 required
               />
             </div>
@@ -86,12 +87,12 @@ class Form extends Component {
                 rows={10}
                 name="msg"
                 type="text"
-                placeholder="Wiadomość"
+                placeholder={t("contact.message")}
                 required
               />
             </div>
 
-            <button type="submit">Wyślij</button>
+            <button type="submit">{t("contact.send")}</button>
           </form>
         )}
       </section>
@@ -99,4 +100,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default withTranslation()(Form);

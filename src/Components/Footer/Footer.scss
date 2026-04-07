@@ -1,11 +1,13 @@
 .footer {
   padding: 3rem 2rem;
   width: 100%;
+  max-width: 100vw;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   background: #eee3d3;
+  box-sizing: border-box;
 
   .footerConact {
     background: transparent;

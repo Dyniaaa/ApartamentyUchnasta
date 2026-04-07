@@ -5,7 +5,7 @@
   align-items: center;
   color: white;
   background: linear-gradient(135deg, #8d7a5e 0%, #b5a183 100%);
-  padding: 40px;
+  padding: 40px 20px;
 
   div {
     display: flex;
@@ -52,7 +52,7 @@
     }
 
     & div:last-of-type {
-      width: 80%;
+      width: 90%;
       text-align: left;
 
       p {

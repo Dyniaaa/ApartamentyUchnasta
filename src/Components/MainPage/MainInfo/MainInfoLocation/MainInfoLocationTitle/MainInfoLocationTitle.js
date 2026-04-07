@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./MainInfoLocationTitle.scss";
 import { NavLink } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 class MainInfoLocationTitle extends Component {
   render() {
+    const { t } = this.props;
     return (
       <section className="MainInfoLocationTitle">
-        <h2>BUSKO - ZDRÓJ</h2>
+        <h2>{t("attractions.busko")}</h2>
         <div className="activity_icons">
           <NavLink to={"/Busko"} onClick={() => window.scrollTo(0, 0)}>
             <div className="activity_icons-box">
@@ -15,7 +17,7 @@ class MainInfoLocationTitle extends Component {
                 loading="lazy"
                 decoding="async"
               ></img>
-              <p>Tężnia</p>
+              <p>{t("attractions.graduationTower")}</p>
             </div>
           </NavLink>
           <NavLink to={"/Busko"} onClick={() => window.scrollTo(0, 0)}>
@@ -26,7 +28,7 @@ class MainInfoLocationTitle extends Component {
                 loading="lazy"
                 decoding="async"
               ></img>
-              <p>Deptak Mickiewicza</p>
+              <p>{t("attractions.alley")}</p>
             </div>
           </NavLink>
           <NavLink to={"/Busko"} onClick={() => window.scrollTo(0, 0)}>
@@ -37,7 +39,7 @@ class MainInfoLocationTitle extends Component {
                 loading="lazy"
                 decoding="async"
               ></img>
-              <p>BuskoLand</p>
+              <p>{t("attractions.buskoland")}</p>
             </div>
           </NavLink>
         </div>
@@ -47,4 +49,4 @@ class MainInfoLocationTitle extends Component {
   }
 }
 
-export default MainInfoLocationTitle;
+export default withTranslation()(MainInfoLocationTitle);

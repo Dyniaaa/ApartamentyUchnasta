@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "../Form/Form.scss";
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const [formStatus, setFormStatus] = useState("");
+  const { t } = useTranslation();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -28,49 +30,52 @@ export default function ContactForm() {
   }
   return (
     <section className="form">
-        {formStatus && <p className={formStatus}>
+      {formStatus && (
+        <p className={formStatus}>
           {formStatus === "success"
-            ? "Wiadomość została wysłana pomyślnie!"
-            : "Wystąpił błąd podczas wysyłania wiadomości. Skontaktuj się telefonicznie lub spróbuj jeszcze raz"}
-        </p>}        
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          onSubmit={handleSubmit}
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <div>
-            <input
-              name="name"
-              type="text"
-              id="name"
-              placeholder="Imię"
-              required
-            />
-          </div>
+            ? t("contact.successMessage")
+            : t("contact.errorMessage")}
+        </p>
+      )}
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        onSubmit={handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <div>
+          <input
+            name="name"
+            type="text"
+            id="name"
+            placeholder={t("contact.name")}
+            required
+          />
+        </div>
 
-          <div>
-            <input
-              name="email"
-              id="email"
-              type="email"
-              placeholder="Mail"
-              required
-            />
-          </div>
-          <div>
-            <textarea
-              rows={10}
-              name="message"
-              type="text"
-              placeholder="Wiadomość"
-              required
-            />
-          </div>
-          <button type="submit" disabled={formStatus}>Wyślij</button>
-        </form>
-      
+        <div>
+          <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder={t("contact.email")}
+            required
+          />
+        </div>
+        <div>
+          <textarea
+            rows={10}
+            name="message"
+            type="text"
+            placeholder={t("contact.message")}
+            required
+          />
+        </div>
+        <button type="submit" disabled={formStatus}>
+          {t("contact.send")}
+        </button>
+      </form>
     </section>
   );
 }

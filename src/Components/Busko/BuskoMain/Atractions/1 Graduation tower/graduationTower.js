@@ -1,23 +1,15 @@
 import React, { Component } from "react";
 import "./graduationTower.scss";
+import { withTranslation } from "react-i18next";
 
 class GraduationTower extends Component {
   render() {
+    const { t } = this.props;
     return (
       <div className="graduationTower">
         <div className="text-box">
-          <h2>Tężnia</h2>
-          <p>
-            Tężnia w Busku-Zdroju to nowoczesny ośrodek uzdrowiskowy, oferujący
-            inhalacje solankowe dla poprawy zdrowia i samopoczucia.
-            Zainspirowana tradycyjnymi tężniami uzdrowiskowymi, tężnia w
-            Busku-Zdroju wykorzystuje bogactwo mikroelementów, takich jak jod i
-            brom, aby stworzyć korzystne warunki do regeneracji i relaksu. Ta
-            harmonijna przestrzeń łączy w sobie naturalne metody leczenia z
-            nowoczesnym podejściem do wellness, przyciągając zarówno turystów,
-            jak i mieszkańców, którzy pragną korzystać z dobroczynnych efektów
-            tężni w spokojnym i urokliwym otoczeniu.
-          </p>
+          <h2>{t("attractions.graduationTower")}</h2>
+          <p>{t("attractions.graduationTowerDesc")}</p>
         </div>
         <div>
           <img src={require("./graduationTower.jpg")} alt="graduationTower" />
@@ -27,4 +19,4 @@ class GraduationTower extends Component {
   }
 }
 
-export default GraduationTower;
+export default withTranslation()(GraduationTower);

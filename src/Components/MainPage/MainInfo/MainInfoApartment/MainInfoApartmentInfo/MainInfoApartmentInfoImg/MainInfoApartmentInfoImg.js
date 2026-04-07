@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import "./MainInfoApartmentInfoImg.scss";
 import { Fade } from "react-awesome-reveal";
+import { withTranslation } from "react-i18next";
 
 class MainInfoApartmentInfoImg extends Component {
   render() {
+    const { t } = this.props;
     return (
       <Fade delay="20" direction="up" triggerOnce>
         <section className="mainInfoApartmentInfoImg">
           <div className="ourApartment">
-            <p>Nasze Apartmenty</p>
-            <p>
-              {" "}
-              Oferujemy w pełni wyposażone apartamenty w Busku-Zdroju, blisko
-              tężni solankowych, z dostępem do naszego zielonego podwórka,
-              grilla i parkingu.
-            </p>
+            <p>{t("apartments.ourApartments")}</p>
+            <p>{t("apartments.ourApartmentsDesc")}</p>
           </div>
 
           <img
@@ -37,4 +34,4 @@ class MainInfoApartmentInfoImg extends Component {
   }
 }
 
-export default MainInfoApartmentInfoImg;
+export default withTranslation()(MainInfoApartmentInfoImg);

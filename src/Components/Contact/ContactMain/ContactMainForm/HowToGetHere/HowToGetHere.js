@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import "./HowToGetHere.scss";
 import MapWithMarker from "../../../../MainPage/MainInfo/MainInfoLocation/MainInfoLocationMap/MapWithMarker/MapWithMarker";
+import { withTranslation } from "react-i18next";
 
 class HowToGetHere extends Component {
   render() {
+    const { t } = this.props;
     return (
       <section className="howToGetHere">
         <div className="psDiv">
-          <p className="howToGetHereTitle">Jak się tu dostać</p>
+          <p className="howToGetHereTitle">{t("contact.howToGetHere")}</p>
           <p>28-100, Busko-Zdrój</p>
           <p>ul. Uchnasta 3</p>
           <div>
@@ -27,4 +29,4 @@ class HowToGetHere extends Component {
   }
 }
 
-export default HowToGetHere;
+export default withTranslation()(HowToGetHere);

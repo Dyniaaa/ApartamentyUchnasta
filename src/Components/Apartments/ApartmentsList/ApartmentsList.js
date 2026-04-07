@@ -4,6 +4,7 @@ import Footer from "../../Footer/Footer";
 import ApartmentCard from "../ApartmentCard/ApartmentCard";
 import { getAllApartments } from "../../../data/apartmentsData";
 import { Fade } from "react-awesome-reveal";
+import { withTranslation } from "react-i18next";
 import "./ApartmentsList.scss";
 
 class ApartmentsList extends Component {
@@ -16,6 +17,7 @@ class ApartmentsList extends Component {
 
   render() {
     const { apartments } = this.state;
+    const { t } = this.props;
 
     return (
       <>
@@ -23,8 +25,8 @@ class ApartmentsList extends Component {
         <div className="apartments-list-page">
           <div className="apartments-list-hero">
             <Fade direction="down" triggerOnce>
-              <h1>Nasze Apartamenty</h1>
-              <p>Wybierz idealny apartament dla siebie i swoich bliskich</p>
+              <h1>{t("apartments.ourApartments")}</h1>
+              <p>{t("apartments.chooseIdeal")}</p>
             </Fade>
           </div>
 
@@ -46,7 +48,7 @@ class ApartmentsList extends Component {
           <div className="apartments-list-info">
             <Fade direction="up" triggerOnce>
               <div className="info-box">
-                <h2>Informacje ogólne</h2>
+                <h2>{t("apartments.generalInfo")}</h2>
                 <div className="info-grid">
                   <div className="info-item">
                     <svg
@@ -63,8 +65,8 @@ class ApartmentsList extends Component {
                       <path d="M12 2v20M2 12h20" />
                     </svg>
                     <div>
-                      <h3>Zameldowanie</h3>
-                      <p>od 15:00</p>
+                      <h3>{t("apartmentDetail.checkIn")}</h3>
+                      <p>{t("apartments.checkInTime")}</p>
                     </div>
                   </div>
                   <div className="info-item">
@@ -82,8 +84,8 @@ class ApartmentsList extends Component {
                       <path d="M12 2v20M17 7l-10 10M7 7h10" />
                     </svg>
                     <div>
-                      <h3>Wymeldowanie</h3>
-                      <p>do 11:00</p>
+                      <h3>{t("apartmentDetail.checkOut")}</h3>
+                      <p>{t("apartments.checkOutTime")}</p>
                     </div>
                   </div>
                   <div className="info-item">
@@ -102,8 +104,8 @@ class ApartmentsList extends Component {
                       <path d="M9 16V8h3.5a2.5 2.5 0 1 1 0 5H9" />
                     </svg>
                     <div>
-                      <h3>Parking</h3>
-                      <p>Bezpłatny parking w cenie</p>
+                      <h3>{t("info.parking")}</h3>
+                      <p>{t("apartments.freeParkingInPrice")}</p>
                     </div>
                   </div>
                 </div>
@@ -117,4 +119,4 @@ class ApartmentsList extends Component {
   }
 }
 
-export default ApartmentsList;
+export default withTranslation()(ApartmentsList);
