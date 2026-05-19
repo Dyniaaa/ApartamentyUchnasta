@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.653e9f7b.css",
-    "main.js": "/static/js/main.59a52741.js",
-    "static/js/453.e9e7ec89.chunk.js": "/static/js/453.e9e7ec89.chunk.js",
+    "main.css": "/static/css/main.c05e998e.css",
+    "main.js": "/static/js/main.2e4f1fc9.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/static/js/453.fd2f0c4a.chunk.js",
     "static/media/IMG_0490.jpg": "/static/media/IMG_0490.89936b1b0261a5276a62.jpg",
     "static/media/Busko-Zdroj.jpg": "/static/media/Busko-Zdroj.7ce977faa548e4f2a42d.jpg",
     "static/media/buskoland.jpg": "/static/media/buskoland.e2124604850871eb18dc.jpg",
@@ -18,12 +18,12 @@
     "static/media/LogoBusko2.png": "/static/media/LogoBusko2.312fba14c980739fede3.png",
     "static/media/LogoBusko.png": "/static/media/LogoBusko.10830a012d51b4a3b39f.png",
     "index.html": "/index.html",
-    "main.653e9f7b.css.map": "/static/css/main.653e9f7b.css.map",
-    "main.59a52741.js.map": "/static/js/main.59a52741.js.map",
-    "453.e9e7ec89.chunk.js.map": "/static/js/453.e9e7ec89.chunk.js.map"
+    "main.c05e998e.css.map": "/static/css/main.c05e998e.css.map",
+    "main.2e4f1fc9.js.map": "/static/js/main.2e4f1fc9.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/static/js/453.fd2f0c4a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.653e9f7b.css",
-    "static/js/main.59a52741.js"
+    "static/css/main.c05e998e.css",
+    "static/js/main.2e4f1fc9.js"
   ]
 }
