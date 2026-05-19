@@ -237,7 +237,7 @@ class MyGallery extends React.Component {
           <ImageGallery
             items={images3}
             showPlayButton={false}
-            showFullscreenButton={true}
+            showFullscreenButton={false}
             additionalClass={"gallery1"}
             lazyLoad={true}
             onImageLoad={this.handleThirdGalleryLoad}

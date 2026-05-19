@@ -484,6 +484,9 @@
 
 // Responsive
 @media (max-width: 1024px) {
+  .image-gallery-fullscreen-button {
+    display: none;
+  }
   .gallery-description-wrapper {
     grid-template-columns: 1fr;
     gap: 2rem;
